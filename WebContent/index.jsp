@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +8,17 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
-	<title>Votre carnet numerique est sur notre plateforme !</title>
+	<title>Votre boutique est en ligne !</title>
 
-	<link rel="shortcut icon" href="WEB-INF/images/gt_favicon.png">
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="WEB-INF/css/bootstrap.min.css">
-	<link rel="stylesheet" href="WEB-INF/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
 	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="WEB-INF/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="WEB-INF/css/main.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -30,25 +32,25 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="WEB-INF/images/logo.jpg" alt="Progressus HTML5 template"></a>
+				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a href="index.html">Click and Collect</a></li>
+					
 
 					<li><a href="index.html">Home</a></li>
 					
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Homme</a></li>
-							<li><a href="sidebar-right.html">Femme</a></li>
+							<li><a href="http://localhost:8080/projetweb/produithomme.jsp">Homme</a></li>
+							<li><a href="http://localhost:8080/projetweb/produitfemme.jsp">Femme</a></li>
 							<li><a href="sidebar-right.html">Covid-19 INFO</a></li>
 							<li><a href="sidebar-right.html">+ INFO</a></li>
 						</ul>
 					</li>
 					<li class="active"><a href="contact.html">Contact</a></li>
-					<li><a class="btn" href="signin.html">Se connecter / S'inscrire</a></li>
+					<li><a class="btn" href="http://localhost:8080/projetweb/signin.jsp">Se connecter / S'inscrire</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -71,7 +73,7 @@
 		<br> <br>
 		<h2 class="thin">Styli</h2>
 		<p class="text-muted">
-			Votre boutique est prÃ©sente en ligne .
+			Votre boutique est présente en ligne .
 		</p>
 	</div>
 	<!-- /Intro-->
@@ -86,20 +88,20 @@
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>Qui sommes-nous?</h4></div>
 					<div class="h-body text-center">
-						<p>Styli est une plateforme internationale de vente de vÃªtements en ligne de type B2C. La sociÃ©tÃ© se spÃ©cialise principalement dans le prÃªt-Ã -porter pour femme, mais elle propose Ã©galement des vÃªtements pour hommes </p>
+						<p>Styli est une plateforme internationale de vente de vêtements en ligne de type B2C. La société se spécialise principalement dans le prêt-à-porter pour femme, mais elle propose également des vêtements pour hommes </p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Livraison </h4></div>
 					<div class="h-body text-center">
-						<p> Le temps d'expÃ©dition est estimÃ© et commence Ã  partir de la date d'expÃ©dition et non Ã  partir de la date d'achat.
-Il peut Ãªtre plus long que prÃ©vu en raison d'une adresse invalide, des procÃ©dures de dÃ©douanement , de stock ou d'autres raisons</p>
+						<p> Le temps d'expédition est estimé et commence à partir de la date d'expédition et non à partir de la date d'achat.
+Il peut être plus long que prévu en raison d'une adresse invalide, des procédures de dédouanement , de stock ou d'autres raisons</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Guide des tailles </h4></div>
 					<div class="h-body text-center">
-						<p>Cliquez juste sur le bouton "guide des tailles" sur chaque page produit pour voir les mesures en centimÃ¨tres ou en pouces et pour Ãªtre sÃ»r qu'elles conviendront pour vous.</p>
+						<p>Cliquez juste sur le bouton "guide des tailles" sur chaque page produit pour voir les mesures en centimètres ou en pouces et pour être sûr qu'elles conviendront pour vous.</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">
@@ -107,7 +109,7 @@ Il peut Ãªtre plus long que prÃ©vu en raison d'une adresse invalide, des procÃ©d
 					<div class="h-body text-center">
 						<p>	Chat en ligne Du lundi au Dimanche : 9:00-22:00 </p>
 						<p> Ticket Dans les 24h </p>
-						<p>Service tÃ©lÃ©phonique Du lundi au vendredi : 9:00-17:00 </p>
+						<p>Service téléphonique Du lundi au vendredi : 9:00-17:00 </p>
 					</div>
 				</div>
 			</div> <!-- /row  -->
@@ -228,8 +230,8 @@ Copyright &copy; 2021, HealMe </a>
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="WEB-INF/js/headroom.min.js"></script>
-	<script src="WEB-INF/js/jQuery.headroom.min.js"></script>
-	<script src="WEB-INF/js/template.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
 </body>
 </html>
