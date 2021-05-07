@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,43 +20,19 @@
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
 </head>
 
 <body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Homme</a></li>
-							<li><a href="sidebar-right.html">Femme</a></li>
-							<li><a href="sidebar-right.html">Covid-19 INFO</a></li>
-							<li><a href="sidebar-right.html">+ INFO</a></li>
-						</ul>
-					</li>
-					<li class="active"><a href="contact.html">Contact</a></li>
-					<li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
+<!----------------------------------------------------------------------------------------------------------->
+<!-- NAVBAR -->
+<!----------------------------------------------------------------------------------------------------------->
+	<jsp:include page="navbar.jsp">
+            <jsp:param name="year" value="2010"/>
+    </jsp:include>
 	<!-- /.navbar -->
-
+<!----------------------------------------------------------------------------------------------------------->
+<!-- CONTAINER-->
+<!----------------------------------------------------------------------------------------------------------->
 	<header id="head" class="secondary"></header>
 
 	<!-- container -->
@@ -72,38 +48,42 @@
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Contact us</h1>
+					<h1 class="page-title">Contactez-nous</h1>
 				</header>
 				
 				<p>
-					We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
+					Un problème sur votre commande ? Une remarque particulière ? Notre équipe est là pour vous répondre au plus vite !
 				</p>
 				<br>
 					<form>
 						<div class="row">
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Name">
+								<input class="form-control" type="text" placeholder="Nom">
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Email">
+								<input class="form-control" type="text" placeholder="Adresse mail">
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Phone">
+								<input class="form-control" type="text" placeholder="Téléphone">
 							</div>
 						</div>
+						
 						<br>
+						<div class="row">
+							<input type="file" name="multiPartServlet" accept="image/*" multiple /> 
+						</div>
+						<br>
+						
 						<div class="row">
 							<div class="col-sm-12">
 								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
 							</div>
 						</div>
 						<br>
+						
 						<div class="row">
-							<div class="col-sm-6">
-								<label class="checkbox"><input type="checkbox"> Sign up for newsletter</label>
-							</div>
 							<div class="col-sm-6 text-right">
-								<input class="btn btn-action" type="submit" value="Send message">
+								<input class="btn btn-action" type="submit" value="Envoyer">
 							</div>
 						</div>
 					</form>
@@ -111,114 +91,42 @@
 			</article>
 			<!-- /Article -->
 			
-			<!-- Sidebar -->
+<!----------------------------------------------------------------------------------------------------------->
+<!-- SIDEBAR ( adresse )-->
+<!----------------------------------------------------------------------------------------------------------->
 			<aside class="col-sm-3 sidebar sidebar-right">
 
 				<div class="widget">
-					<h4>Address</h4>
+					<h4>Adresse</h4>
 					<address>
-						2002 Holcombe Boulevard, Houston, TX 77030, USA
+						Place du Maréchal de Lattre de Tassigny, 75016 Paris
 					</address>
-					<h4>Phone:</h4>
+					<h4>Téléphone:</h4>
 					<address>
-						(713) 791-1414
+						01 44 05 44 05
 					</address>
 				</div>
 
 			</aside>
 			<!-- /Sidebar -->
-
 		</div>
 	</div>	<!-- /container -->
+	
+	
+	
 	
 	<section class="container-full top-space">
 		<div id="map"></div>
 	</section>
 
-<footer id="footer" class="top-space">
 
- 
+<!----------------------------------------------------------------------------------------------------------->
+<!-- FOOTER -->
+<!----------------------------------------------------------------------------------------------------------->
 
-<div class="footer1">
-<div class="container">
-<div class="row">
-
-<div class="col-md-3 widget">
-<h3 class="widget-title">Contact</h3>
-<div class="widget-body">
-<p><br>
-<a href="mailto:#">support.healme@gmail.com</a><br>
-<br>
-
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-3 widget">
-<h3 class="widget-title">Suivez nous !</h3>
-<div class="widget-body">
-<p class="follow-me-icons">
-<a href=""><i class="fa fa-twitter fa-2"></i></a>
-<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-<a href=""><i class="fa fa-github fa-2"></i></a>
-<a href=""><i class="fa fa-facebook fa-2"></i></a>
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-6 widget">
-<h3 class="widget-title"></h3>
-<div class="widget-body">
-
-</div>
-</div>
-
- 
-
-</div> <!-- /row of widgets -->
-</div>
-</div>
-
- 
-
-<div class="footer2">
-<div class="container">
-<div class="row">
-
-<div class="col-md-6 widget">
-<div class="widget-body">
-<p class="simplenav">
-<a href="#">Accueil</a> |
-<a href="contact.html">Contact</a> |
-<b><a href="signup.html">S'inscrire</a></b>
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-6 widget">
-<div class="widget-body">
-<p class="text-right">
-Copyright &copy; 2021, HealMe </a>
-</p>
-</div>
-</div>
-
- 
-
-</div> <!-- /row of widgets -->
-</div>
-</div>
-
- 
-
-</footer>
-
+	<jsp:include page="navbar.jsp">
+            <jsp:param name="year" value="2010"/>
+    </jsp:include>
 
 
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
