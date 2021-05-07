@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
-	<title>Connexion - Progressus Bootstrap template</title>
+	<title>Connexion - Progressus Bootstrap</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
