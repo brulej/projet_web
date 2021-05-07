@@ -34,23 +34,18 @@
 <!-- CONTAINER-->
 <!----------------------------------------------------------------------------------------------------------->
 	<header id="head" class="secondary"></header>
-
 	<!-- container -->
 	<div class="container">
-
 		<ol class="breadcrumb">
 			<li><a href="index.html">Home</a></li>
 			<li class="active">About</li>
 		</ol>
-
 		<div class="row">
-			
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Contactez-nous</h1>
 				</header>
-				
 				<p>
 					Un problème sur votre commande ? Une remarque particulière ? Notre équipe est là pour vous répondre au plus vite !
 				</p>
@@ -67,35 +62,29 @@
 								<input class="form-control" type="text" placeholder="Téléphone">
 							</div>
 						</div>
-						
 						<br>
 						<div class="row">
 							<input type="file" name="multiPartServlet" accept="image/*" multiple /> 
 						</div>
 						<br>
-						
 						<div class="row">
 							<div class="col-sm-12">
 								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
 							</div>
 						</div>
 						<br>
-						
 						<div class="row">
 							<div class="col-sm-6 text-right">
 								<input class="btn btn-action" type="submit" value="Envoyer">
 							</div>
 						</div>
 					</form>
-
 			</article>
 			<!-- /Article -->
-			
 <!----------------------------------------------------------------------------------------------------------->
 <!-- SIDEBAR ( adresse )-->
 <!----------------------------------------------------------------------------------------------------------->
 			<aside class="col-sm-3 sidebar sidebar-right">
-
 				<div class="widget">
 					<h4>Adresse</h4>
 					<address>
@@ -106,30 +95,23 @@
 						01 44 05 44 05
 					</address>
 				</div>
-
 			</aside>
 			<!-- /Sidebar -->
 		</div>
 	</div>	<!-- /container -->
-	
-	
-	
-	
 	<section class="container-full top-space">
 		<div id="map"></div>
 	</section>
-
-
 <!----------------------------------------------------------------------------------------------------------->
 <!-- FOOTER -->
 <!----------------------------------------------------------------------------------------------------------->
-
-	<jsp:include page="navbar.jsp">
+	<jsp:include page="footer.jsp">
             <jsp:param name="year" value="2010"/>
     </jsp:include>
+<!----------------------------------------------------------------------------------------------------------->
+<!-- SCRIPTS -->
+<!----------------------------------------------------------------------------------------------------------->
 
-
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>
