@@ -26,36 +26,18 @@
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 </head>
-
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					
-
-					<li><a href="index.html">Home</a></li>
-					
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="http://localhost:8080/projetweb/produithomme.jsp">Homme</a></li>
-							<li><a href="http://localhost:8080/projetweb/produitfemme.jsp">Femme</a></li>
-							<li><a href="sidebar-right.html">Covid-19 INFO</a></li>
-							<li><a href="sidebar-right.html">+ INFO</a></li>
-						</ul>
-					</li>
-					<li class="active"><a href="contact.html">Contact</a></li>
-					<li><a class="btn" href="http://localhost:8080/projetweb/signin.jsp">Se connecter / S'inscrire</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
+<body>
+<!----------------------------------------------------------------------------------------------------------->
+<!-- NAVBAR -->
+<!----------------------------------------------------------------------------------------------------------->
+	<jsp:include page="navbar.jsp">
+            <jsp:param name="year" value="2010"/>
+    </jsp:include>
 	<!-- /.navbar -->
+ 
+<!----------------------------------------------------------------------------------------------------------->
+<!-- CONTAINER-->
+<!----------------------------------------------------------------------------------------------------------->
  
 	<!-- Header -->
 	<header id="head">
@@ -81,9 +63,6 @@
 	<!-- Highlights - jumbotron -->
 	<div class="jumbotron top-space">
 		<div class="container">
-			
-	
-			
 			<div class="row">
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>Qui sommes-nous?</h4></div>
@@ -118,116 +97,18 @@ Il peut être plus long que prévu en raison d'une adresse invalide, des procédure
 	</div>
 	<!-- /Highlights -->
 
-	<!-- container -->
-
-</div>	<!-- /container -->
-	
-	<!-- Social links. @TODO: replace by link/instructions in template -->
-	<section id="social">
-		<div class="container">
-			<div class="wrapper clearfix">
-				<!-- AddThis Button BEGIN -->
-				<div class="addthis_toolbox addthis_default_style">
-				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-				<a class="addthis_button_tweet"></a>
-				<a class="addthis_button_linkedin_counter"></a>
-				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-				</div>
-				<!-- AddThis Button END -->
-			</div>
-		</div>
-	</section>
-	<!-- /social links -->
-
-<footer id="footer" class="top-space">
-
- 
-
-<div class="footer1">
-<div class="container">
-<div class="row">
-
-<div class="col-md-3 widget">
-<h3 class="widget-title">Contact</h3>
-<div class="widget-body">
-<p><br>
-<a href="mailto:#">support.styli@gmail.com</a><br>
-<br>
-
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-3 widget">
-<h3 class="widget-title">Suivez nous !</h3>
-<div class="widget-body">
-<p class="follow-me-icons">
-<a href=""><i class="fa fa-twitter fa-2"></i></a>
-<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-<a href=""><i class="fa fa-github fa-2"></i></a>
-<a href=""><i class="fa fa-facebook fa-2"></i></a>
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-6 widget">
-<h3 class="widget-title"></h3>
-<div class="widget-body">
-
-</div>
-</div>
-
- 
-
-</div> <!-- /row of widgets -->
-</div>
-</div>
-
- 
-
-<div class="footer2">
-<div class="container">
-<div class="row">
-
-<div class="col-md-6 widget">
-<div class="widget-body">
-<p class="simplenav">
-<a href="#">Accueil</a> |
-<a href="contact.html">Contact</a> |
-<b><a href="signup.html">S'inscrire</a></b>
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-6 widget">
-<div class="widget-body">
-<p class="text-right">
-Copyright &copy; 2021, HealMe </a>
-</p>
-</div>
-</div>
-
- 
-
-</div> <!-- /row of widgets -->
-</div>
-</div>
-
- 
-
-</footer>
-		
 
 
+<!----------------------------------------------------------------------------------------------------------->
+<!-- FOOTER -->
+<!----------------------------------------------------------------------------------------------------------->
+	<jsp:include page="footer.jsp">
+            <jsp:param name="year" value="2010"/>
+    </jsp:include>
+<!----------------------------------------------------------------------------------------------------------->
+<!-- SCRIPTS -->
+<!----------------------------------------------------------------------------------------------------------->
 
-
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>

@@ -28,26 +28,19 @@
 </head>
 
 <body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a href="index.html">Accueil</a></li>
-					
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
+<!----------------------------------------------------------------------------------------------------------->
+<!-- NAVBAR -->
+<!----------------------------------------------------------------------------------------------------------->
+	<jsp:include page="navbar.jsp">
+            <jsp:param name="year" value="2010"/>
+    </jsp:include>
 	<!-- /.navbar -->
+<!----------------------------------------------------------------------------------------------------------->
+<!-- CONTAINER-->
+<!----------------------------------------------------------------------------------------------------------->
+
 
 	<header id="head" class="secondary"></header>
-
 	<!-- container -->
 	<div class="container">
 
@@ -103,82 +96,22 @@
 		</div>
 	</div>	<!-- /container -->
 	
-<footer id="footer" class="top-space">
+<!----------------------------------------------------------------------------------------------------------->
+<!-- FOOTER -->
+<!----------------------------------------------------------------------------------------------------------->
+	<jsp:include page="footer.jsp">
+            <jsp:param name="year" value="2010"/>
+    </jsp:include>
+<!----------------------------------------------------------------------------------------------------------->
+<!-- SCRIPTS -->
+<!----------------------------------------------------------------------------------------------------------->
 
- 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+	
 
-<div class="footer1">
-<div class="container">
-<div class="row">
-
-<div class="col-md-3 widget">
-<h3 class="widget-title">Contact</h3>
-<div class="widget-body">
-<p><br>
-<a href="mailto:#">support.healme@gmail.com</a><br>
-<br>
-
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-3 widget">
-<h3 class="widget-title">Suivez nous !</h3>
-<div class="widget-body">
-<p class="follow-me-icons">
-<a href=""><i class="fa fa-twitter fa-2"></i></a>
-<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-<a href=""><i class="fa fa-github fa-2"></i></a>
-<a href=""><i class="fa fa-facebook fa-2"></i></a>
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-6 widget">
-<h3 class="widget-title"></h3>
-<div class="widget-body">
-
-</div>
-</div>
-
- 
-
-</div> <!-- /row of widgets -->
-</div>
-</div>
-
- 
-
-<div class="footer2">
-<div class="container">
-<div class="row">
-
-<div class="col-md-6 widget">
-<div class="widget-body">
-<p class="simplenav">
-<a href="#">Accueil</a> |
-<a href="contact.html">Contact</a> |
-<b><a href="signup.html">S'inscrire</a></b>
-</p>
-</div>
-</div>
-
- 
-
-<div class="col-md-6 widget">
-<div class="widget-body">
-<p class="text-right">
-Copyright &copy; 2021, HealMe </a>
-</p>
-</div>
-</div>
-
- 
-
-</div> <!-- /row of widgets -->
-</div>
-</div>
+</body>
+</html>
