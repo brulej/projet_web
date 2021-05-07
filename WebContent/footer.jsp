@@ -69,7 +69,7 @@
 						<p class="simplenav">
 							<a href="#">Accueil</a> |
 							<a href="contact.html">Contact</a> |
-							<b><a href="signup.html">S'inscrire</a></b>
+							<b><a href="signup.jsp">S'inscrire</a></b>
 						</p>
 					</div>
 				</div>

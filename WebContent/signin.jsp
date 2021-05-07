@@ -45,7 +45,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
+			<li><a href="index.jsp">Accueil</a></li>
 			<li class="active">Connexion</li>
 		</ol>
 
@@ -61,7 +61,7 @@
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<h3 class="thin text-center">Connectez-vous</h3>
-							<p class="text-center text-muted">Vous n'avez pas encore un compte,<a href="http://localhost:8080/projetweb/signup.jsp">Cliquez-ici </a> pour s'inscrire </p>
+							<p class="text-center text-muted">Vous n'avez pas encore un compte,<a href="signup.jsp">Cliquez-ici </a> pour s'inscrire </p>
 							<hr>
 							
 							<form>
@@ -81,7 +81,7 @@
 										<b><a href="">Mot de passe oublié?</a></b>
 									</div>
 									<div class="col-lg-4 text-right">
-										<a href= "listemedecin.html" class="btn btn-action" type="submit">Se connecter</a>
+										<a class="btn btn-action" type="submit">Se connecter</a>
 									</div>
 								</div>
 							</form>
