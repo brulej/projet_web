@@ -35,19 +35,19 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="index.jsp">Home</a></li>
+					<li><a href="about.jsp">About</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Homme</a></li>
-							<li><a href="sidebar-right.html">Femme</a></li>
+							<li><a href="produithomme.jsp">Homme</a></li>
+							<li><a href="produitfemme.jsp">Femme</a></li>
 							<li><a href="sidebar-right.html">Covid-19 INFO</a></li>
 							<li><a href="sidebar-right.html">+ INFO</a></li>
 						</ul>
 					</li>
-					<li class="active"><a href="contact.html">Contact</a></li>
-					<li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
+					<li class="active"><a href="contact.jsp">Contact</a></li>
+					<li><a class="btn" href="signin.jsp">SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>

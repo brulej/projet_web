@@ -195,24 +195,16 @@
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body>
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a href="index.html">Accueil</a></li>
-					
-					<li><a href="contact.html">Contact</a></li>
-					<li class="active"><a class="btn" href="signin.html">Se connecter</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
+
+<!----------------------------------------------------------------------------------------------------------->
+<!-- NAVBAR -->
+<!----------------------------------------------------------------------------------------------------------->
+	<jsp:include page="navbar.jsp">
+            <jsp:param name="year" value="2010"/>
+    </jsp:include>
+	<!-- /.navbar --> 
+	
+<body>	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>
@@ -475,5 +467,10 @@ for (var i = 0; i < all_spc.length; i++)
   </div>
  
 <input type="hidden" name="event_id" value="1618996004846_211102783506346_E7bbYeE"></form><img id="event_tracking_image" src="https://events.jotform.com/form/211102783506346/?ref=https%253A%252F%252Feu.jotform.com%252F&amp;res=1366x768&amp;eventID=1618996004846_211102783506346_E7bbYeE&amp;loc=https%253A%252F%252Fform.jotform.com%252F211102783506346" alt="jftr" width="1" height="1" style="display: none;">
-
+<!----------------------------------------------------------------------------------------------------------->
+<!-- FOOTER -->
+<!----------------------------------------------------------------------------------------------------------->
+	<jsp:include page="footer.jsp">
+            <jsp:param name="year" value="2010"/>
+    </jsp:include>
 <script type="text/javascript">JotForm.forwardToEu=true;</script></body></html>

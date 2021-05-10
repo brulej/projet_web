@@ -44,7 +44,7 @@
 		<div class="container">
 			<div class="row">
 				<h1 class="lead" style="color:black";>Bienvenue sur votre boutique en ligne</h1>
-				<p><a class="btn btn-default btn-lg" role="button">Plus d'informations</a> <a class="btn btn-action btn-lg" role="button" href="signinMedecin.html">Se connecter</a></p>
+				<p><a class="btn btn-default btn-lg" role="button">Plus d'informations</a> </p>
 			</div>
 		</div>
 	</header>
