@@ -79,11 +79,8 @@
 <!-- 1. Importation de la SDK JavaScript PayPal -->
 <script src="https://www.paypal.com/sdk/js?client-id=AVh6_A9TgqfYBPiYR4thIKmuSYzpskR4lpBbCemZK-oY2p6_Qv6uAUaJEKhYrt7iCGij6UYrB1rC2HWy"></script>
 <script>
-	// 2. Afficher le bouton PayPal
-	paypal.Buttons({
 
-
-	}).render("#paypal-boutons");
+	
 
 </script>
 
