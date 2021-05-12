@@ -1,3 +1,5 @@
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -64,15 +66,22 @@
 							<p style = "color:black" class="text-center text-muted">Vous n'avez pas encore un compte,<a href="signup.jsp">Cliquez-ici </a> pour s'inscrire </p>
 							<hr>
 							
-							<form>
+							
+							
+							
+					
+							
+							<form method="post" action= "Login" >
+							
 								<div class="top-margin">
-									<label>Adresse mail <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label for="textLogin"> login <span class="text-danger">*</span></label>
+									<input id= "textLogin" name = "textLogin" type="text" value='<%= session.getAttribute("login") %>' autofocus />  
 								</div>
 								<div class="top-margin">
-									<label>Mot de passe <span class="text-danger">*</span></label>
-									<input type="password" class="form-control" hidden >
+									<label for="textLogin"> password <span class="text-danger">*</span></label>
+									<input id= "textLogin" name = "textLogin" type="text" value='<%= session.getAttribute("password") %>' autofocus />
 								</div>
+								<input name = 'b EnConnect' type = 'submit' >
 
 								<hr>
 
@@ -85,6 +94,7 @@
 									</div>
 								</div>
 							</form>
+							
 						</div>
 					</div>
 
