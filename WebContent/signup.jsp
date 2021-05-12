@@ -2,176 +2,10 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 
-<html class="supernova"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="alternate" type="application/json+oembed" href="https://www.jotform.com/oembed/?format=json&amp;url=https%3A%2F%2Fform.jotform.com%2F211102783506346" title="oEmbed Form">
-<link rel="alternate" type="text/xml+oembed" href="https://www.jotform.com/oembed/?format=xml&amp;url=https%3A%2F%2Fform.jotform.com%2F211102783506346" title="oEmbed Form">
-<meta property="og:title" content="Formulaire">
-<meta property="og:url" content="https://form.jotform.com/211102783506346">
-<meta property="og:description" content="Please click the link to complete this form.">
-<meta name="slack-app-id" content="AHNMASS8M">
-<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
-<link rel="canonical" href="https://form.jotform.com/211102783506346">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1">
-<meta name="HandheldFriendly" content="true">
+
 <title>Formulaire</title>
-<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.24954" rel="stylesheet" type="text/css">
-<link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.24954">
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.24954">
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/54be8ecb700cc443378b4568.css?themeRevisionID=5cf3a17a544a540fb772aaf1">
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/payment_feature.css?3.3.24954">
-<style type="text/css">
-    .form-label-left{
-        width:150px;
-    }
-    .form-line{
-        padding-top:12px;
-        padding-bottom:12px;
-    }
-    .form-label-right{
-        width:150px;
-    }
-    body, html{
-        margin:0;
-        padding:0;
-        background:#FFFFFF;
-    }
 
-    .form-all{
-        margin:0px auto;
-        padding-top:0px;
-        width:690px;
-        color:rgb(255, 82, 0) !important;
-        font-family:'Open Sans';
-        font-size:14px;
-    }
-</style>
 
-<style type="text/css" id="form-designer-style">
-    /* Injected CSS Code */
-/*PREFERENCES STYLE*/
-    .form-all {
-      font-family: Verdana, sans-serif;
-    }
-    .form-all .qq-upload-button,
-    .form-all .form-submit-button,
-    .form-all .form-submit-reset,
-    .form-all .form-submit-print {
-      font-family: Verdana, sans-serif;
-    }
-    .form-all .form-pagebreak-back-container,
-    .form-all .form-pagebreak-next-container {
-      font-family: Verdana, sans-serif;
-    }
-    .form-header-group {
-      font-family: Verdana, sans-serif;
-    }
-    .form-label {
-      font-family: Verdana, sans-serif;
-    }
-  
-    .form-label.form-label-auto {
-      
-    display: inline-block;
-    float: left;
-    text-align: left;
-  
-    }
-  
-    .form-line {
-      margin-top: 12px;
-      margin-bottom: 12px;
-    }
-  
-    .form-all {
-      max-width: 700px;
-      width: 100%;
-    }
-  
-    .form-label.form-label-left,
-    .form-label.form-label-right,
-    .form-label.form-label-left.form-label-auto,
-    .form-label.form-label-right.form-label-auto {
-      width: 150px;
-    }
-  
-    .form-all {
-      font-size: 12pxpx
-    }
-    .form-all .qq-upload-button,
-    .form-all .qq-upload-button,
-    .form-all .form-submit-button,
-    .form-all .form-submit-reset,
-    .form-all .form-submit-print {
-      font-size: 12pxpx
-    }
-    .form-all .form-pagebreak-back-container,
-    .form-all .form-pagebreak-next-container {
-      font-size: 12pxpx
-    }
-  
-    .supernova .form-all, .form-all {
-      background-color: #FFFFFF;
-    }
-  
-    .form-all {
-      color: #000000;
-    }
-    .form-header-group .form-header {
-      color: #000000;
-    }
-    .form-header-group .form-subHeader {
-      color: #000000;
-    }
-    .form-label-top,
-    .form-label-left,
-    .form-label-right,
-    .form-html,
-    .form-checkbox-item label,
-    .form-radio-item label {
-      color: #000000;
-    }
-    .form-sub-label {
-      color: #1a1a1a;
-    }
-  
-    .supernova {
-      background-color: undefined;
-    }
-    .supernova body {
-      background: transparent;
-    }
-  
-    .form-textbox,
-    .form-textarea,
-    .form-dropdown,
-    .form-radio-other-input,
-    .form-checkbox-other-input,
-    .form-captcha input,
-    .form-spinner input {
-      background-color: undefined;
-    }
-  
-    .supernova {
-      background-image: none;
-    }
-    #stage {
-      background-image: none;
-    }
-  
-    .form-all {
-      background-image: none;
-    }
-  
-  .ie-8 .form-all:before { display: none; }
-  .ie-8 {
-    margin-top: auto;
-    margin-top: initial;
-  }
-  
-  /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
-    /* Injected CSS Code */
-</style>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -188,6 +22,7 @@
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/stylesignup.css">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -204,18 +39,10 @@
     </jsp:include>
 	<!-- /.navbar --> 
 	
-<body>	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="assets/js/headroom.min.js"></script>
-	<script src="assets/js/jQuery.headroom.min.js"></script>
-	<script src="assets/js/template.js"></script>
-</body>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js"></script>
-<script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.24954" type="text/javascript"></script>
+
+
 <script type="text/javascript">
 	JotForm.init(function(){
 if (window.JotForm && JotForm.accessible) $('input_19').setAttribute('tabindex',0);
@@ -238,17 +65,16 @@ if (window.JotForm && JotForm.accessible) $('input_25').setAttribute('tabindex',
 JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et prenom","type":"control_fullname"},{"name":"soumettre","qid":"2","text":"Soumettre","type":"control_button"},{"name":"email3","qid":"3","text":"Email","type":"control_email"},{"name":"numeroDe4","qid":"4","text":"Numero de telephone","type":"control_phone"},null,{"name":"dateDe6","qid":"6","text":"Date de naissance","type":"control_birthdate"},null,{"name":"civilite","qid":"8","text":"Civilite","type":"control_radio"},null,{"name":"sexe","qid":"10","text":"Sexe","type":"control_radio"},null,null,null,null,{"name":"informationsPersonnelles","qid":"15","text":"Informations personnelles ","type":"control_head"},null,null,null,{"name":"adresse","qid":"19","text":"Adresse","type":"control_textbox"},null,{"name":"codePostale","qid":"21","text":"Code Postale","type":"control_textbox"},{"name":"ville","qid":"22","text":"Ville","type":"control_textbox"},{"name":"province","qid":"23","text":"Province","type":"control_dropdown"},{"description":"","name":"motDe","qid":"24","subLabel":"","text":"Mot de passe","type":"control_textbox"},{"description":"","name":"confirmezLe","qid":"25","subLabel":"","text":"Confirmez le mot de passe","type":"control_textbox"}]);}, 20); 
 <!-- </script> -->
 <!-- </head> -->
-<body data-new-gr-c-s-check-loaded="14.1006.0" data-gr-ext-installed="">
-<form class="jotform-form" action="https://submit.jotformeu.com/submit/211102783506346/" method="post" name="form_211102783506346" id="211102783506346" accept-charset="utf-8" autocomplete="on" novalidate="true">
-  <input type="hidden" name="formID" value="211102783506346">
-  <input type="hidden" id="JWTContainer" value="">
-  <input type="hidden" id="cardinalOrderNumber" value="">
-  <div role="main" class="form-all">
+
+  <div role="main" class="form-all" >
     <ul class="form-section page-section">
       <li id="cid_15" class="form-input-wide" data-type="control_head">
         <div class="form-header-group  header-greek">
           <div class="header-text httal htvam">
+            <br> </br>
+            <br> </br> 
             <h2 id="header_15" class="form-header" data-component="header">
+           
               Informations personnelles
             </h2>
           </div>
@@ -437,9 +263,8 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-              Soumettre
-            </button>
+            <a style = "color:black"class="btn btn-action" type="submit"> Soumettre </a>
+             
           </div>
         </div>
       </li>

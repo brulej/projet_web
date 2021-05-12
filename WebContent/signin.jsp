@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
-	<title>Connexion - Progressus Bootstrap template</title>
+	<title>Connexion</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
@@ -46,7 +46,7 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.jsp">Accueil</a></li>
-			<li class="active">Connexion</li>
+		
 		</ol>
 
 		<div class="row">
@@ -61,7 +61,7 @@
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<h3 class="thin text-center">Connectez-vous</h3>
-							<p class="text-center text-muted">Vous n'avez pas encore un compte,<a href="signup.jsp">Cliquez-ici </a> pour s'inscrire </p>
+							<p style = "color:black" class="text-center text-muted">Vous n'avez pas encore un compte,<a href="signup.jsp">Cliquez-ici </a> pour s'inscrire </p>
 							<hr>
 							
 							<form>
@@ -81,7 +81,7 @@
 										<b><a href="">Mot de passe oublié?</a></b>
 									</div>
 									<div class="col-lg-4 text-right">
-										<a class="btn btn-action" type="submit">Se connecter</a>
+										<a style = "color:black"class="btn btn-action" type="submit">Se connecter</a>
 									</div>
 								</div>
 							</form>
