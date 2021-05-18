@@ -71,28 +71,22 @@
 							
 					
 							
-							<form method="post" action= "Login" >
+							<form method="post" action= "login" >
 							
 								<div class="top-margin">
-									<label for="textLogin"> login <span class="text-danger">*</span></label>
-									<input id= "textLogin" name = "textLogin" type="text" value='<%= session.getAttribute("login") %>' autofocus />  
+									<label for="txtLogin"> login <span class="text-danger">*</span></label>
+									<input id= "txtLogin" name = "txtLogin" type="text" value="${Login}" autofocus />  
 								</div>
 								<div class="top-margin">
-									<label for="textLogin"> password <span class="text-danger">*</span></label>
-									<input id= "textLogin" name = "textLogin" type="text" value='<%= session.getAttribute("password") %>' autofocus />
+									<label for="txtPassword"> password <span class="text-danger">*</span></label>
+									<input id= "txtPassword" name = "txtPassword" type="text" value="${Password}" autofocus />
 								</div>
 								<input name = 'b EnConnect' type = 'submit' >
+								<div class='errorMessage'> ${errorMessage}</div>
 
 								<hr>
 
-								<div class="row">
-									<div class="col-lg-8">
-										<b><a href="">Mot de passe oublié?</a></b>
-									</div>
-									<div class="col-lg-4 text-right">
-										<a style = "color:black"class="btn btn-action" type="submit">Se connecter</a>
-									</div>
-								</div>
+								
 							</form>
 							
 						</div>

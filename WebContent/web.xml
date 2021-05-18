@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+     <displaye-name> WebStore</displaye-name> 
+
+      <context-param>
+         <param-name> JDBC_DRIVER</param-name>
+		 <param-value> com.mysql.jdbc.Driver</param-value>
+
+	  </context-param>
+	  
+	  <context-param>
+	  	 <param-name> JDBC_URL</param-name>
+		 <param-value> jdbc:mysql://localhost:3306/webStore</param-value>
+	  </context-param>
+	  
+	  <context-param>
+	  	 <param-name> JDBC_LOGIN</param-name>
+		 <param-value>webstore</param-value>
+	  </context-param>
+	  
+	    <context-param>
+	  	 <param-name> JDBC_PASSWORD</param-name>
+		 <param-value>password</param-value>
+	  </context-param>
+	  <session-config>
+	  <session-timeout> 50</session-timeout>
+	  </session-config>
