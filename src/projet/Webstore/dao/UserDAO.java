@@ -17,9 +17,9 @@ public class UserDAO extends DAOContext {
 
     public static User isValidLogin( String login, String password ) {
         try ( Connection connection = DriverManager.getConnection( dbURL, dbLogin, dbPassword ) ) {
-           // String strSql = "SELECT * FROM T_Users WHERE login='" 
+            //String strSql = "SELECT * FROM T_Users WHERE login='" 
                             //+ login + "' AND password='" + password + "'";
-          /*  String strSql = "SELECT * FROM T_Users WHERE login=? AND password=?";
+           String strSql = "SELECT * FROM T_Users WHERE login=? AND password=?";
             System.out.println(strSql + login + password);
             try ( PreparedStatement statement  = connection.prepareStatement( strSql ) ) {
                 statement.setString( 1, login );
@@ -36,7 +36,7 @@ public class UserDAO extends DAOContext {
                         return null;
                     }
                 }
-            }*/
+            }
         	return null; 
         } catch (SQLException ex ) {
         	
