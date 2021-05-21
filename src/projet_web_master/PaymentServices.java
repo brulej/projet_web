@@ -6,11 +6,19 @@ import java.util.*;
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.*;
  
+/**
+ * Cette classe fournit toutes les méthodes spécifiques, nécéssaires au payment paypal
+ * 
+ * @author jer91
+ */
+
 public class PaymentServices {
     private static final String CLIENT_ID = "AVh6_A9TgqfYBPiYR4thIKmuSYzpskR4lpBbCemZK-oY2p6_Qv6uAUaJEKhYrt7iCGij6UYrB1rC2HWy";
     private static final String CLIENT_SECRET = "EMW84W3euo3guDHqskLU2jaMj63fz5FY_Hm8UkB-MNeu_RVxJ_pL_-wiLfWiSle4sBQm8Gqyy5Mt_OqO";
     private static final String MODE = "sandbox";
  
+    
+    
     public String authorizePayment(OrderDetail orderDetail)        
             throws PayPalRESTException {       
  
@@ -25,9 +33,7 @@ public class PaymentServices {
         requestPayment.setPayer(payer);
         requestPayment.setIntent("authorize");
         APIContext apiContext = new APIContext(CLIENT_ID, CLIENT_SECRET, MODE);
-        System.out.println(requestPayment);
         Payment approvedPayment = requestPayment.create(apiContext);
-        System.out.println("connexion");
 
         return getApprovalLink(approvedPayment);
  
@@ -49,12 +55,12 @@ public class PaymentServices {
      
     private RedirectUrls getRedirectURLs() {
         RedirectUrls redirectUrls = new RedirectUrls();
-        redirectUrls.setCancelUrl("http://localhost:8080/projet_web_master/cancel.html");
-        redirectUrls.setReturnUrl("http://localhost:8080/projet_web_master/review_payment");
-         
+        redirectUrls.setCancelUrl("http://localhost:8081/projet_web_master/cancel.html");
+        redirectUrls.setReturnUrl("http://localhost:8081/projet_web_master/review_payment");
         return redirectUrls;
     }
      
+    
     private List<Transaction> getTransactionInformation(OrderDetail orderDetail) {
         Details details = new Details();
         details.setShipping(orderDetail.getShipping());
@@ -66,7 +72,6 @@ public class PaymentServices {
         amount.setTotal(orderDetail.getTotal());
         amount.setDetails(details);
         
-     
         Transaction transaction = new Transaction();
         transaction.setAmount(amount);
         transaction.setDescription(orderDetail.getProductName());
@@ -94,7 +99,6 @@ public class PaymentServices {
     private String getApprovalLink(Payment approvedPayment) {
         List<Links> links = approvedPayment.getLinks();
         String approvalLink = null;
-         
         for (Links link : links) {
             if (link.getRel().equalsIgnoreCase("approval_url")) {
                 approvalLink = link.getHref();
@@ -110,13 +114,12 @@ public class PaymentServices {
         return Payment.get(apiContext, paymentId);
     }
     
+    
     public Payment executePayment(String paymentId, String payerId) throws PayPalRESTException {
-    	
         PaymentExecution paymentExecution = new PaymentExecution();
         paymentExecution.setPayerId(payerId);
         Payment payment = new Payment().setId(paymentId);
         APIContext apiContext = new APIContext(CLIENT_ID, CLIENT_SECRET, MODE);
-     
         return payment.execute(apiContext, paymentExecution);
     }
 }

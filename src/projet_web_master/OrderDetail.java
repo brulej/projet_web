@@ -1,5 +1,14 @@
 package projet_web_master;
 
+
+/**
+ * Cette classe correspond à un objet reprenant les caracteristiques d'un item
+ * lors d'une transaction paypal
+ * 
+ * @author jer91
+ */
+
+
 public class OrderDetail {
     private String productName;
     private double subtotal;
