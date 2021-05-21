@@ -2,18 +2,18 @@ package projet_web_master;
 
 public class OrderDetail {
     private String productName;
-    private float subtotal;
-    private float shipping;
-    private float tax;
-    private float total;
+    private double subtotal;
+    private double shipping;
+    private double tax;
+    private double total;
  
     public OrderDetail(String productName, String subtotal,
             String shipping, String tax, String total) {
         this.productName = productName;
-        this.subtotal = Float.parseFloat(subtotal);
-        this.shipping = Float.parseFloat(shipping);
-        this.tax = Float.parseFloat(tax);
-        this.total = Float.parseFloat(total);
+        this.subtotal = Double.parseDouble(subtotal);
+        this.shipping = Double.parseDouble(shipping);
+        this.tax = Double.parseDouble(tax);
+        this.total = Double.parseDouble(total);
     }
  
     public String getProductName() {
@@ -21,18 +21,18 @@ public class OrderDetail {
     }
  
     public String getSubtotal() {
-        return String.format("%.2f", subtotal);
+        return String.format("%.2f", subtotal).replace(',', '.');
     }
  
     public String getShipping() {
-        return String.format("%.2f", shipping);
+        return String.format("%.2f", shipping).replace(',', '.');
     }
  
     public String getTax() {
-        return String.format("%.2f", tax);
+        return String.format("%.2f", tax).replace(',', '.');
     }
      
     public String getTotal() {
-        return String.format("%.2f", total);
+        return String.format("%.2f", total).replace(',', '.');
     }
 }

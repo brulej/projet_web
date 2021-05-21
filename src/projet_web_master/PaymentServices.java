@@ -27,7 +27,7 @@ public class PaymentServices {
         APIContext apiContext = new APIContext(CLIENT_ID, CLIENT_SECRET, MODE);
         System.out.println(requestPayment);
         Payment approvedPayment = requestPayment.create(apiContext);
-        System.out.println("test3");
+        System.out.println("connexion");
 
         return getApprovalLink(approvedPayment);
  
@@ -40,7 +40,7 @@ public class PaymentServices {
         PayerInfo payerInfo = new PayerInfo();
         payerInfo.setFirstName("John")
                  .setLastName("Doe")
-                 .setEmail("sb-pe43mq6156745@business.example.com");
+                 .setEmail("sb-cvjpd6161900@personal.example.com");
          
         payer.setPayerInfo(payerInfo);
          
@@ -60,11 +60,12 @@ public class PaymentServices {
         details.setShipping(orderDetail.getShipping());
         details.setSubtotal(orderDetail.getSubtotal());
         details.setTax(orderDetail.getTax());
-     
+        
         Amount amount = new Amount();
         amount.setCurrency("EUR");
         amount.setTotal(orderDetail.getTotal());
         amount.setDetails(details);
+        
      
         Transaction transaction = new Transaction();
         transaction.setAmount(amount);
