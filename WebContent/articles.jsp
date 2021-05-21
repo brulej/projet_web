@@ -1,7 +1,5 @@
-
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
-	<title>Connexion</title>
+	<title>Contact us - Progressus Bootstrap template</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
@@ -22,11 +20,6 @@
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
 </head>
 
 <body>
@@ -42,69 +35,27 @@
 <!----------------------------------------------------------------------------------------------------------->
 
 
-	<header id="head" class="secondary"></header>
-	<!-- container -->
-	<div class="container">
-
-		<ol class="breadcrumb">
-			<li><a href="index.jsp">Accueil</a></li>
-		
-		</ol>
-
-		<div class="row">
-			
-			<!-- Article main content -->
-			<article class="col-xs-12 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">Connexion</h1>
-				</header>
-				
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<h3 class="thin text-center">Connectez-vous</h3>
-							<p style = "color:black" class="text-center text-muted">Vous n'avez pas encore un compte,<a href="signup.jsp">Cliquez-ici </a> pour s'inscrire </p>
-							<hr>
-							
-							
-							
-							
-					
-							
-							<form method="post" action= "login" >
-							
-								<div class="top-margin">
-									<label for="txtLogin"> login <span class="text-danger">*</span></label>
-									<input id= "txtLogin" name = "txtLogin" type="text" value="${Login}" autofocus />  
-								</div>
-								<div class="top-margin">
-									<label for="txtPassword"> password <span class="text-danger">*</span></label>
-									<input id= "txtPassword" name = "txtPassword" type="text" value="${Password}" autofocus />
-								</div>
-								<input name = 'b EnConnect' type = 'submit' >
-								<div class='errorMessage'> ${errorMessage}</div>
-
-								<hr>
-
-								<div class="row">
-									<div class="col-lg-4 text-right">
-										<a style = "color:black"class="btn btn-action" type="submit">Se connecter</a>
-									</div>
-								</div>
-
-							</form>
-							
-						</div>
-					</div>
-
+<!----------------------------------------------------------------------------------------------------------->
+<!-- SIDEBAR ( adresse )-->
+<!----------------------------------------------------------------------------------------------------------->
+			<aside class="col-sm-3 sidebar sidebar-right">
+				<div class="widget">
+					<h4>Adresse</h4>
+					<address>
+						Place du Maréchal de Lattre de Tassigny, 75016 Paris
+					</address>
+					<h4>Téléphone:</h4>
+					<address>
+						01 44 05 44 05
+					</address>
 				</div>
-				
-			</article>
-			<!-- /Article -->
-
+			</aside>
+			<!-- /Sidebar -->
 		</div>
 	</div>	<!-- /container -->
-	
+	<section class="container-full top-space">
+		<div id="map"></div>
+	</section>
 <!----------------------------------------------------------------------------------------------------------->
 <!-- FOOTER -->
 <!----------------------------------------------------------------------------------------------------------->
@@ -120,6 +71,10 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	
+	<!-- Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script> 
+	<script src="assets/js/google-map.js"></script>
 	
 
 </body>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 	<meta charset="utf-8">
@@ -54,7 +54,7 @@
 	<!-- Intro -->
 	<div class="container text-center">
 		<br> <br>
-		<p1 class="thin" style = "color:black">Notre aventure d&eacutemarre en 2021, avec pour mission d&#039accompagner les femmes et les hommes dans tous leurs moments de vie en proposant une mode accessible, facile &agrave porter, et d&eacuteclin&eacutee dans un large colorama</p1>
+		<p1 class="thin" style = "color:black">Notre aventure démarre en 2021, avec pour mission d'accompagner les femmes et les hommes dans tous leurs moments de vie en proposant une mode accessible, facile à porter, et déclinée dans un large colorama</p1>
 		
 	</div>
 	<!-- /Intro-->

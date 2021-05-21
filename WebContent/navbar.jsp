@@ -31,27 +31,32 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
+				<a class="navbar-brand" href="index.html"><img src="assets/img/logo5.png" alt="Progressus HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.jsp">Home</a></li>
-					<li><a href="about.jsp">About</a></li>
+					<li class="active" ><a href="about.jsp">Soldes</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="produithomme.jsp">Homme</a></li>
 							<li><a href="produitfemme.jsp">Femme</a></li>
-							<li><a href="sidebar-right.html">Covid-19 INFO</a></li>
-							<li><a href="sidebar-right.html">+ INFO</a></li>
 						</ul>
 					</li>
-					<li class="active"><a href="contact.jsp">Contact</a></li>
+					<li> <a href="contact.jsp">Contact</a></li>
 					<li><a class="btn" href="signin.jsp">SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
 	</div> 
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
 
 </body>
 </html>
