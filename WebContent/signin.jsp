@@ -1,3 +1,5 @@
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -64,15 +66,23 @@
 							<p style = "color:black" class="text-center text-muted">Vous n'avez pas encore un compte,<a href="signup.jsp">Cliquez-ici </a> pour s'inscrire </p>
 							<hr>
 							
-							<form>
+							
+							
+							
+					
+							
+							<form method="post" action= "login" >
+							
 								<div class="top-margin">
-									<label>Adresse mail <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label for="txtLogin"> login <span class="text-danger">*</span></label>
+									<input id= "txtLogin" name = "txtLogin" type="text" value="${Login}" autofocus />  
 								</div>
 								<div class="top-margin">
-									<label>Mot de passe <span class="text-danger">*</span></label>
-									<input type="password" class="form-control" hidden >
+									<label for="txtPassword"> password <span class="text-danger">*</span></label>
+									<input id= "txtPassword" name = "txtPassword" type="text" value="${Password}" autofocus />
 								</div>
+								<input name = 'b EnConnect' type = 'submit' >
+								<div class='errorMessage'> ${errorMessage}</div>
 
 								<hr>
 
@@ -81,7 +91,9 @@
 										<a style = "color:black"class="btn btn-action" type="submit">Se connecter</a>
 									</div>
 								</div>
+
 							</form>
+							
 						</div>
 					</div>
 
