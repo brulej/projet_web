@@ -10,10 +10,9 @@ import com.paypal.base.rest.PayPalRESTException;
  
 
 /**
- * Cette class est un servlet qui sert à lancer l'autorisation de paiement, 
- * c'est la première étape du paiement Paypal
- * 
- * 
+ * Cette class est un servlet qui sert à effectuer de paiement, 
+ * c'est la dernière étape du paiement Paypal
+ * il est invoqué par review.jsp et envoie vers recepit.jsp
  * @author jer91
  */
 
