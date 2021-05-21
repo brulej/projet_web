@@ -8,6 +8,15 @@ import javax.servlet.http.*;
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.PayPalRESTException;
  
+
+/**
+ * Cette class est un servlet qui sert à lancer l'autorisation de paiement, 
+ * c'est la première étape du paiement Paypal
+ * 
+ * 
+ * @author jer91
+ */
+
 @WebServlet("/execute_payment")
 public class ExecutePaymentServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
