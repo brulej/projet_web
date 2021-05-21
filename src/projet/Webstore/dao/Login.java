@@ -24,7 +24,7 @@ public class Login extends HttpServlet {
     @Override
     public void init() throws ServletException {   //la servlet quand elle va demarrer elle va deùander a initialiser un DAOContext 
     												//grace a cette derniere on va pouvoir lire les paramètres qui sont dans web.xml
-        DAOContext.init( this.getServletContext() );
+       // DAOContext.init( this.getServletContext() );
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -45,7 +45,7 @@ public class Login extends HttpServlet {
         
         System.out.println( login + " password " + password);
         User connectedUser  = UserDAO.isValidLogin( login, password );
-        /*if ( connectedUser != null ) {
+        if ( connectedUser != null ) {
             
             HttpSession session = request.getSession( true );
             session.setAttribute( "connectedUser", connectedUser );
@@ -54,9 +54,9 @@ public class Login extends HttpServlet {
         } else {
         
             request.setAttribute( "errorMessage", "Bad identity" );         
-            request.getRequestDispatcher( "/login.jsp" ).forward( request, response );
+            request.getRequestDispatcher( "/signin.jsp" ).forward( request, response );
             
-        }*/
+        }
         
     }
 

@@ -10,21 +10,22 @@ import javax.servlet.ServletContext;
 
 public class DAOContext {
     
-    protected static String dbURL;
+    protected static String dbURL= "toto";
     protected static String dbLogin;
     protected static String dbPassword;
     
     
-    public static void init( ServletContext context ) {
+    public static void setconnexion() {
+    	System.out.println("init");
         try {
             
-            Class.forName( context.getInitParameter( "JDBC_DRIVER" ) );
-            dbURL = context.getInitParameter( "JDBC_URL" );
-            dbLogin = context.getInitParameter( "JDBC_LOGIN" );
-            dbPassword = context.getInitParameter( "JDBC_PASSWORD" );
+            Class.forName( "com.mysql.jdbc.Driver" ) ;
+            dbURL = "jdbc:mysql://localhost:3306/webstore" ;
+            dbLogin =  "root" ;
+            dbPassword =  "" ;
             
         } catch( Exception exception ) {
-            
+           System.out.println("je suis ici");  
             exception.printStackTrace();
             
         }
