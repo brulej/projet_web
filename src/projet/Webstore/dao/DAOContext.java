@@ -1,6 +1,7 @@
 package projet.Webstore.dao;
 
 import java.io.FileInputStream;
+
 import java.io.IOException;
 import java.util.Properties;
 
@@ -25,7 +26,7 @@ public class DAOContext  {
     	System.out.println("init");
     	
     	Properties props = new Properties();
-		try (FileInputStream fis = new FileInputStream("C:\\Users\\jer91\\OneDrive\\Bureau\\projet_web\\src\\projet\\Webstore\\dao\\config.properties")){
+		try (FileInputStream fis = new FileInputStream("C:\\web\\projet_web\\src\\projet\\Webstore\\dao\\config.properties")){
 			props.load(fis);
 		} catch (IOException e) {
 			e.printStackTrace();
