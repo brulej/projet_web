@@ -65,6 +65,8 @@ if (window.JotForm && JotForm.accessible) $('input_25').setAttribute('tabindex',
 JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et prenom","type":"control_fullname"},{"name":"soumettre","qid":"2","text":"Soumettre","type":"control_button"},{"name":"email3","qid":"3","text":"Email","type":"control_email"},{"name":"numeroDe4","qid":"4","text":"Numero de telephone","type":"control_phone"},null,{"name":"dateDe6","qid":"6","text":"Date de naissance","type":"control_birthdate"},null,{"name":"civilite","qid":"8","text":"Civilite","type":"control_radio"},null,{"name":"sexe","qid":"10","text":"Sexe","type":"control_radio"},null,null,null,null,{"name":"informationsPersonnelles","qid":"15","text":"Informations personnelles ","type":"control_head"},null,null,null,{"name":"adresse","qid":"19","text":"Adresse","type":"control_textbox"},null,{"name":"codePostale","qid":"21","text":"Code Postale","type":"control_textbox"},{"name":"ville","qid":"22","text":"Ville","type":"control_textbox"},{"name":"province","qid":"23","text":"Province","type":"control_dropdown"},{"description":"","name":"motDe","qid":"24","subLabel":"","text":"Mot de passe","type":"control_textbox"},{"description":"","name":"confirmezLe","qid":"25","subLabel":"","text":"Confirmez le mot de passe","type":"control_textbox"}]);}, 20); 
 <!-- </script> -->
 <!-- </head> -->
+		<form method="POST" action="userAddServlet">
+
 
   <div role="main" class="form-all" >
     <ul class="form-section page-section">
@@ -110,11 +112,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
         <div id="cid_1" class="form-input">
           <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-              <input type="text" id="first_1" name="q1_nomEt1[first]" class="form-textbox" size="10" value="" data-component="first" aria-labelledby="label_1 sublabel_1_first">
+              <input type="prenom" id="prenom" name="prenom" class="form-textbox" size="10" value="" data-component="first" aria-labelledby="label_1 sublabel_1_first">
               <label class="form-sub-label" for="first_1" id="sublabel_1_first" style="min-height:13px" aria-hidden="false"> Prénom </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
-              <input type="text" id="last_1" name="q1_nomEt1[last]" class="form-textbox" size="15" value="" data-component="last" aria-labelledby="label_1 sublabel_1_last">
+              <input type="nom" id="nom" name="nom" class="form-textbox" size="15" value="" data-component="last" aria-labelledby="label_1 sublabel_1_last">
               <label class="form-sub-label" for="last_1" id="sublabel_1_last" style="min-height:13px" aria-hidden="false"> Nom de famille </label>
             </span>
           </div>
@@ -139,101 +141,35 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
           </div>
         </div>
       </li>
-      <li class="form-line" data-type="control_birthdate" id="id_6">
-        <label class="form-label form-label-left form-label-auto" id="label_6" for="input_6"> Date de naissance </label>
-        <div id="cid_6" class="form-input">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <select name="q6_dateDe6[month]" id="input_6_month" class="form-dropdown" data-component="birthdate-month" aria-labelledby="label_6 sublabel_6_month">
-                <option>  </option>
-                <option value="Janvier"> Janvier </option>
-                <option value="Février"> Février </option>
-                <option value="mars"> mars </option>
-                <option value="Avril"> Avril </option>
-                <option value="Mai"> Mai </option>
-                <option value="juin"> juin </option>
-                <option value="Juillet"> Juillet </option>
-                <option value="Août"> Août </option>
-                <option value="Septembre"> Septembre </option>
-                <option value="Octobre"> Octobre </option>
-                <option value="Novembre"> Novembre </option>
-                <option value="Décembre"> Décembre </option>
-              </select>
-              <label class="form-sub-label" for="input_6_month" id="sublabel_6_month" style="min-height:13px" aria-hidden="false"> Mois </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <select name="q6_dateDe6[day]" id="input_6_day" class="form-dropdown" data-component="birthdate-day" aria-labelledby="label_6 sublabel_6_day">
-                <option>  </option>
-                <%
-                for (int i =1; i <= 31;i++ ){%>
-                	<option value="<%= i%>"> <%= i%> </option>
-                <%}
-                %>
-                
-                
-              </select>
-              <label class="form-sub-label" for="input_6_day" id="sublabel_6_day" style="min-height:13px" aria-hidden="false"> Jour </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <select name="q6_dateDe6[year]" id="input_6_year" class="form-dropdown" data-component="birthdate-year" aria-labelledby="label_6 sublabel_6_year">
-                <option>  </option>
-                
-                <%
-                for (int i =2021; i >= 1900;i-- ){%>
-                	<option value="<%= i%>"> <%= i%> </option>
-
-                <%}
-                %>
-                
-              </select>
-              <label class="form-sub-label" for="input_6_year" id="sublabel_6_year" style="min-height:13px" aria-hidden="false"> Année </label>
-            </span>
-          </div>
-        </div>
-      </li>
+     
       <li class="form-line" data-type="control_textbox" id="id_19">
         <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19"> Adresse </label>
         <div id="cid_19" class="form-input">
-          <input type="text" id="input_19" name="q19_adresse" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_19">
+          <input type="adresse" id="adresse" name="adresse" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_19">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_21">
         <label class="form-label form-label-left form-label-auto" id="label_21" for="input_21"> Code Postale </label>
         <div id="cid_21" class="form-input">
-          <input type="text" id="input_21" name="q21_codePostale" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_21">
+          <input type="codePostale" id="codePostale" name="codePostale" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_21">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_22">
         <label class="form-label form-label-left form-label-auto" id="label_22" for="input_22"> Ville </label>
         <div id="cid_22" class="form-input">
-          <input type="text" id="input_22" name="q22_ville" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_22">
+          <input type="ville" id="ville" name="ville" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_22">
         </div>
       </li>
-      <li class="form-line" data-type="control_dropdown" id="id_23">
-        <label class="form-label form-label-left form-label-auto" id="label_23" for="input_23"> Province </label>
-        <div id="cid_23" class="form-input">
-          <select class="form-dropdown" id="input_23" name="q23_province" style="width:150px" data-component="dropdown" aria-labelledby="label_23">
-            <option value="">  </option>
-            <option value="Brabant wallon"> Brabant wallon </option>
-            <option value="commune à facilité"> commune à facilité </option>
-            <option value="Bruxelles"> Bruxelles </option>
-            <option value="Namur"> Namur </option>
-            <option value="Hainaut"> Hainaut </option>
-            <option value="Liège"> Liège </option>
-            <option value="Luxembourg"> Luxembourg </option>
-          </select>
-        </div>
-      </li>
+     
       <li class="form-line" data-type="control_phone" id="id_4">
         <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4_area"> Numéro de téléphone </label>
         <div id="cid_4" class="form-input">
           <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="areaCode">
-              <input type="tel" id="input_4_area" name="q4_numeroDe4[area]" class="form-textbox" value="" data-component="areaCode" aria-labelledby="label_4 sublabel_4_area">
+              <input type="Tel" id="Tel" name="Tel" class="form-textbox" value="" data-component="areaCode" aria-labelledby="label_4 sublabel_4_area">
               <span class="phone-separate" aria-hidden="true">
                 &nbsp;-
               </span>
-              <label class="form-sub-label" for="input_4_area" id="sublabel_4_area" style="min-height:13px" aria-hidden="false"> préfixe </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone">
               <input type="tel" id="input_4_phone" name="q4_numeroDe4[phone]" class="form-textbox" value="" data-component="phone" aria-labelledby="label_4 sublabel_4_phone">
@@ -243,15 +179,15 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
         </div>
       </li>
       <li class="form-line" data-type="control_email" id="id_3">
-        <label class="form-label form-label-left form-label-auto" id="label_3" for="input_3"> Email </label>
+        <label class="form-label form-label-left form-label-auto" id="label_3" for="input_3"> Login </label>
         <div id="cid_3" class="form-input">
-          <input type="email" id="input_3" name="q3_email3" class="form-textbox validate[Email]" size="30" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_3">
+          <input type="login" id="login" name="login" class="form-textbox validate[Email]" size="30" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_3">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_24">
         <label class="form-label form-label-left form-label-auto" id="label_24" for="input_24"> Mot de passe </label>
         <div id="cid_24" class="form-input">
-          <input type="text" id="input_24" name="q24_motDe" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_24">
+          <input type="password" id="password" name="password" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_24">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_25">
@@ -263,7 +199,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <a style = "color:black"class="btn btn-action" type="submit"> Soumettre </a>
+            <a style = "color:black"class="btn btn-action" type="submit" > Ajouter un utilisateur </a>
              
           </div>
         </div>
@@ -274,6 +210,8 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
       </li>
     </ul>
   </div>
+        </form>
+  
   <script>
   JotForm.showJotFormPowered = "new_footer";
   </script>
