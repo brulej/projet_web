@@ -13,6 +13,8 @@ import javax.servlet.http.HttpSession;
 import projet.Webstore.dao.User;
 import projet.Webstore.dao.DAOContext;
 import projet.Webstore.dao.UserDAO;
+import projet.Webstore.dao.ArticleDAO;
+
 
 import javax.servlet.ServletContext;
 import javax.servlet.GenericServlet;
@@ -63,7 +65,8 @@ public class Login extends HttpServlet {
             
             HttpSession session = request.getSession( true );
             session.setAttribute( "connectedUser", connectedUser );
-            request.getRequestDispatcher( "/index.jsp" ).forward( request, response );
+            session.setAttribute( "catalogBrowser", new CatalogBrowser() );
+            request.getRequestDispatcher( "/viewArticle.jsp" ).forward( request, response );
         
         } else {
         

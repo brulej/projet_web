@@ -2,6 +2,7 @@ package projet.Webstore.dao;
 
 import java.io.File;
 import java.io.FileInputStream;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -31,6 +32,7 @@ public class DAOContext  {
     public  void setconnexion() {
     	
     	Properties props = new Properties();
+
     	/* DEBUG
     	System.out.println(new File("").getAbsolutePath());
     	System.out.println(context.getContextPath());
@@ -49,6 +51,7 @@ public class DAOContext  {
 			e.printStackTrace();
 		}
 		try (FileInputStream fis = new FileInputStream("C:\\Users\\jer91\\OneDrive\\Bureau\\projet_web\\src\\projet\\Webstore\\dao\\config.properties")){
+
 			props.load(fis);
 		} catch (IOException e) {
 			e.printStackTrace();
