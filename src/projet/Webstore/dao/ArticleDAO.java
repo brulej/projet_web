@@ -15,7 +15,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import fr.koor.webstore.business.Article;
+
 
 public class ArticleDAO extends DAOContext {
 

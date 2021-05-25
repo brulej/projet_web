@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 public class UserDAO extends DAOContext {
 
-    public static User isValidLogin( String login, String password ) {
+    public  User isValidLogin( String login, String password ) {
     	  System.out.println("connection");
           System.out.println(dbURL);
 
