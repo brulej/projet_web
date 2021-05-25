@@ -12,11 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletContext;
-import java.util.Properties;
-import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 
-import javax.servlet.ServletContext;
 import javax.servlet.GenericServlet;
 
 public class DAOContext  {
@@ -32,21 +30,17 @@ public class DAOContext  {
     
     public  void setconnexion() {
     	
-    	
     	Properties props = new Properties();
-    	
     	/* DEBUG
     	System.out.println(new File("").getAbsolutePath());
     	System.out.println(context.getContextPath());
     	*/
-    	
 		System.out.println( "inter");
 		try (InputStream fstream = context.getResourceAsStream("WEB-INF/config.properties")){
 			props.load(fstream);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 		/* METHODES OBSOLETES
     	System.out.println("3");
 		try (InputStream fstream = this.getClass().getClassLoader().getResourceAsStream("config.properties")){
