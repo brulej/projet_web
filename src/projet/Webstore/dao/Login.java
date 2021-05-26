@@ -52,11 +52,12 @@ public class Login extends HttpServlet {
         
         System.out.println( login + " password " + password);
         
-        /* peut  eventuelement repasser à un mode static 
-         *  User connectedUser  = UserDAO.isValidLogin( login, password );
-         *  Si on repasse les fonctions DAOContext.setconnexio et UserDao.isValidLogin en static
-         *  
-         * */
+        // peut  eventuelement repasser à un mode static 
+       
+         // Si on repasse les fonctions DAOContext.setconnexio et UserDao.isValidLogin en static
+        //User connectedUser  = UserDAO.isValidLogin( login, password );
+           
+        
         UserDAO dao = new UserDAO();
         dao.setContext(getServletContext());
  
