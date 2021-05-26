@@ -1,7 +1,7 @@
 package projet.Webstore.dao;
 
 import java.io.IOException;
-
+import java.util.Properties;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +15,9 @@ import projet.Webstore.dao.DAOContext;
 import projet.Webstore.dao.UserDAO;
 import projet.Webstore.dao.ArticleDAO;
 
+
+import javax.servlet.ServletContext;
+import javax.servlet.GenericServlet;
 
 /**
  * Servlet implementation class Login
@@ -48,7 +51,16 @@ public class Login extends HttpServlet {
         request.setAttribute( "password", password );
         
         System.out.println( login + " password " + password);
-        User connectedUser  = UserDAO.isValidLogin( login, password );
+        
+        /* peut  eventuelement repasser à un mode static 
+         *  User connectedUser  = UserDAO.isValidLogin( login, password );
+         *  Si on repasse les fonctions DAOContext.setconnexio et UserDao.isValidLogin en static
+         *  
+         * */
+        UserDAO dao = new UserDAO();
+        dao.setContext(getServletContext());
+ 
+        User connectedUser  = dao.isValidLogin( login, password );
         if ( connectedUser != null ) {
             
             HttpSession session = request.getSession( true );
