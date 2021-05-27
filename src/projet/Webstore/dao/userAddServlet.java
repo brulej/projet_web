@@ -42,8 +42,16 @@ public class userAddServlet extends HttpServlet{
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nom = request.getParameter("nom"); 
-		String prenom = request.getParameter("prenom"); 
+		String nom = request.getParameter("nom");
+		String h = request.getParameter("h"); 
+		String f = request.getParameter("f"); 
+        String prenom = request.getParameter("prenom"); 
+		String mlle = request.getParameter("mlle"); 
+		String mme = request.getParameter("mme"); 
+		String mr= request.getParameter("mr"); 
+		String jour= request.getParameter("jour"); 
+		String annee = request.getParameter("annee"); 
+		String mois = request.getParameter("mois"); 
 		String adresse = request.getParameter("adresse"); 
 		String codePostale = request.getParameter("codePostale"); 
 		String ville = request.getParameter("ville");
@@ -71,13 +79,13 @@ public class userAddServlet extends HttpServlet{
 
 		try(Connection connection = DriverManager.getConnection(url, login_jdbc, password_jdbc)){
 			System.out.println("Connection BDD réussi -  pour insertion");
-			String strSQLInsert = "insert into t_users (login, password, nom, prenom, Tel, adresse, codePostale, ville) values ('" + login + " ', '" + password +"', '" + nom +"', '" + prenom +"', '" +Tel  +"', '" + adresse +"', '" + codePostale +"', '" + ville +"')";
+			String strSQLInsert = "insert into t_users (h, f, mr, mme, mlle, jour, annee, mois, login, password, nom, prenom, Tel, adresse, codePostale, ville) values ('" + h + " ','" + f + " ','" + mr + " ','" + mme + " ','" + mlle + " ','" + jour + " ','" + annee + " ','" + mois + " ','" + login + " ', '" + password +"', '" + nom +"', '" + prenom +"', '" +Tel  +"', '" + adresse +"', '" + codePostale +"', '" + ville +"')";
 			try(Statement state = connection.createStatement()){
 				state.executeUpdate(strSQLInsert);
 			}
 			
 			System.out.println("Succes insertion");
-			request.getRequestDispatcher("signup.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 		} catch (SQLException e) {
 			throw new IllegalStateException(e);
 		}

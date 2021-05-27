@@ -22,15 +22,15 @@ import javax.servlet.GenericServlet;
 /**
  * Servlet implementation class Login
  */
-@WebServlet(urlPatterns="/login", loadOnStartup=1) //on rajoute le paramètre loadOnStartup pour etre certain d'initialiser le contexte
+@WebServlet(urlPatterns="/login", loadOnStartup=1) //on rajoute le paramÃ¨tre loadOnStartup pour etre certain d'initialiser le contexte
 public class Login extends HttpServlet {
     
     private static final long serialVersionUID = -4319076288258537575L;
 
 
     @Override
-    public void init() throws ServletException {   //la servlet quand elle va demarrer elle va deùander a initialiser un DAOContext 
-    												//grace a cette derniere on va pouvoir lire les paramètres qui sont dans web.xml
+    public void init() throws ServletException {   //la servlet quand elle va demarrer elle va deÃ¹ander a initialiser un DAOContext 
+    												//grace a cette derniere on va pouvoir lire les paramÃ¨tres qui sont dans web.xml
        // DAOContext.init( this.getServletContext() );
     }
     
@@ -52,11 +52,11 @@ public class Login extends HttpServlet {
         
         System.out.println( login + " password " + password);
         
-        /* peut  eventuelement repasser à un mode static 
-         *  User connectedUser  = UserDAO.isValidLogin( login, password );
-         *  Si on repasse les fonctions DAOContext.setconnexio et UserDao.isValidLogin en static
-         *  
-         * */
+        /*peut  eventuelement repasser Ã  un mode static 
+        *si on repasse les fonctions DAOContext.setconnexio et UserDao.isValidLogin en static
+        *User connectedUser  = UserDAO.isValidLogin( login, password );
+        */  
+        
         UserDAO dao = new UserDAO();
         dao.setContext(getServletContext());
  

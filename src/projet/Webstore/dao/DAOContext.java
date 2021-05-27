@@ -40,6 +40,7 @@ public class DAOContext  {
     	*/
 
 		try (InputStream fstream = context.getResourceAsStream("WEB-INF/config.properties")){
+
 			props.load(fstream);
 		} catch (IOException e) {
 			e.printStackTrace();
