@@ -63,9 +63,10 @@
 							</div>
 						</div>
 						<br>
-						<div class="row">
+						<div class="col-sm-4">
 							<input type="file" name="multiPartServlet" id="multiPartServlet" accept="image/*" multiple /> 
 						</div>
+						<br>
 						<br>
 						<div class="row">
 							<div class="col-sm-12">
