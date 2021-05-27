@@ -15,7 +15,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 671b8032d44aface77cbff2948436dc74f75f7cc
 public class ArticleDAO extends DAOContext {
 
     public static int getArticleCount() {

@@ -38,8 +38,9 @@ public class DAOContext  {
     	System.out.println(new File("").getAbsolutePath());
     	System.out.println(context.getContextPath());
     	*/
-		System.out.println( "inter");
-		try (InputStream fstream = context.getResourceAsStream("C:\\web\\projet_web\\src\\projet\\Webstore\\dao\\config.properties")){
+
+		try (InputStream fstream = context.getResourceAsStream("WEB-INF/config.properties")){
+
 			props.load(fstream);
 		} catch (IOException e) {
 			e.printStackTrace();
