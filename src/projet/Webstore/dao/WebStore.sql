@@ -31,16 +31,25 @@ INSERT INTO T_Articles (IdArticle, Description, Brand,  UnitaryPrice) value (2,'
 
 SELECT * FROM T_Articles;
 
+CREATE TABLE T_message (
+   Id_message    INT(10)         PRIMARY KEY AUTO_INCREMENT,
+   Nom  varchar(20)         ,
+   mail VARCHAR(30)      NOT null   ,
+   tel VARCHAR(10)  ,
+   images VARCHAR(1000),
+	mess VARCHAR(5000)     
+   
+) ENGINE = InnoDB;
+
+INSERT INTO T_message ( Nom, mail,tel,images,mess) value ('Jean','jean@hotmail.fr','jiih','ijoijoi','oijoijo');
+
+SELECT * FROM T_message;
 
 
 
 
 
 
-
-
-
-	
 	
 	
 	

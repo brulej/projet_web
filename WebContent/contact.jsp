@@ -50,26 +50,26 @@
 					Un problème sur votre commande ? Une remarque particulière ? Notre équipe est là pour vous répondre au plus vite !
 				</p>
 				<br>
-					<form>
-						<div class="row">
+					<form method="POST" action="addmessage" enctype="multipart/form-data">
+						<div class="row" >
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Nom">
+								<input class="form-control" type="text" placeholder="Nom"  name="names" id="names">
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Adresse mail">
+								<input class="form-control" type="text" placeholder="Adresse mail" name="mail" id="mail">
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Téléphone">
+								<input class="form-control" type="text" placeholder="Téléphone" name="tel" id="tel">
 							</div>
 						</div>
 						<br>
 						<div class="row">
-							<input type="file" name="multiPartServlet" accept="image/*" multiple /> 
+							<input type="file" name="multiPartServlet" id="multiPartServlet" accept="image/*" multiple /> 
 						</div>
 						<br>
 						<div class="row">
 							<div class="col-sm-12">
-								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
+								<textarea placeholder="Type your message here..." class="form-control" rows="9"  name="mes" id="mes"></textarea>
 							</div>
 						</div>
 						<br>
