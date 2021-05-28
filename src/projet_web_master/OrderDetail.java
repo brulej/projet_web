@@ -15,14 +15,16 @@ public class OrderDetail {
     private double shipping;
     private double tax;
     private double total;
+    private int Qte;
  
     public OrderDetail(String productName, String subtotal,
-            String shipping, String tax, String total) {
+            String shipping, String tax, String total, String Qte) {
         this.productName = productName;
         this.subtotal = Double.parseDouble(subtotal);
         this.shipping = Double.parseDouble(shipping);
         this.tax = Double.parseDouble(tax);
         this.total = Double.parseDouble(total);
+        this.Qte = Integer.parseInt(Qte);
     }
  
     public String getProductName() {
@@ -41,7 +43,26 @@ public class OrderDetail {
         return String.format("%.2f", tax).replace(',', '.');
     }
      
-    public String getTotal() {
-        return String.format("%.2f", total).replace(',', '.');
+    
+    public String getQte() {
+        return String.valueOf(Qte)  ;
     }
+
+    public int getQteint() {
+        return Qte  ;
+    }
+    
+    public double getSubtotaldouble() {
+        return subtotal;
+    }
+ 
+    public double getShippingdouble() {
+        return shipping;
+    }
+ 
+    public double getTaxdouble() {
+        return tax;
+    }
+     
+
 }

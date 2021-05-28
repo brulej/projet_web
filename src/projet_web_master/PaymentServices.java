@@ -1,6 +1,8 @@
 package projet_web_master;
 
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
  
 import com.paypal.api.payments.*;
@@ -19,12 +21,14 @@ public class PaymentServices {
  
     
     
-    public String authorizePayment(OrderDetail orderDetail)        
+    public String authorizePayment(List<OrderDetail> orderDetail)        
             throws PayPalRESTException {       
  
         Payer payer = getPayerInformation();
         RedirectUrls redirectUrls = getRedirectURLs();
         List<Transaction> listTransaction = getTransactionInformation(orderDetail);
+        System.out.println(listTransaction);
+        
         
         Payment requestPayment = new Payment();
 
@@ -32,6 +36,7 @@ public class PaymentServices {
         requestPayment.setRedirectUrls(redirectUrls);
         requestPayment.setPayer(payer);
         requestPayment.setIntent("authorize");
+        
         APIContext apiContext = new APIContext(CLIENT_ID, CLIENT_SECRET, MODE);
         Payment approvedPayment = requestPayment.create(apiContext);
 
@@ -61,32 +66,64 @@ public class PaymentServices {
     }
      
     
-    private List<Transaction> getTransactionInformation(OrderDetail orderDetail) {
-        Details details = new Details();
-        details.setShipping(orderDetail.getShipping());
-        details.setSubtotal(orderDetail.getSubtotal());
-        details.setTax(orderDetail.getTax());
-        
-        Amount amount = new Amount();
-        amount.setCurrency("EUR");
-        amount.setTotal(orderDetail.getTotal());
-        amount.setDetails(details);
-        
-        Transaction transaction = new Transaction();
-        transaction.setAmount(amount);
-        transaction.setDescription(orderDetail.getProductName());
-         
+    public String reformatDouble(double chiffre) {
+        return String.format("%.2f", chiffre).replace(',', '.');
+    }
+    
+    
+    private List<Transaction> getTransactionInformation(List<OrderDetail> orderDetail) {
+    	
         ItemList itemList = new ItemList();
         List<Item> items = new ArrayList<>();
-         
+        Transaction transaction = new Transaction();
+        Amount amount = new Amount();
+        Details details = new Details();
+        
+        double global_shipping =0d;
+        double global_tax =0d;
+        double global_subtotal=0d;
+        double global_total=0d;
+        
+        DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        String dateDujour =format.format(date);
+        
+
+    	for (int i= 0; i <orderDetail.size(); i++ ) {
+        
+    	//Insertion de l'item
         Item item = new Item();
         item.setCurrency("EUR");
-        item.setName(orderDetail.getProductName());
-        item.setPrice(orderDetail.getSubtotal());
-        item.setTax(orderDetail.getTax());
-        item.setQuantity("1");
+        item.setName(orderDetail.get(i).getProductName());
+        item.setPrice(orderDetail.get(i).getSubtotal());
+        item.setTax(orderDetail.get(i).getTax());
+        item.setQuantity(orderDetail.get(i).getQte());
          
         items.add(item);
+        
+        //Calcul du montant
+        
+        global_tax = global_tax + orderDetail.get(i).getTaxdouble();
+        global_subtotal = global_subtotal + orderDetail.get(i).getSubtotaldouble();
+         
+    	}
+    	global_shipping = orderDetail.get(0).getShippingdouble(); // pas idéal mais demanderait de revoir la totalité du code, On prend le premier car tous les cout de livraison sont identiques
+    	global_total = global_shipping + global_subtotal + global_tax;
+    	
+        details.setShipping(reformatDouble(global_shipping));
+        details.setSubtotal(reformatDouble(global_subtotal));
+        details.setTax(reformatDouble(global_tax));
+        
+        
+        amount.setCurrency("EUR");
+        amount.setTotal(reformatDouble(global_total));
+        amount.setDetails(details);
+        
+        
+        transaction.setAmount(amount);
+        transaction.setDescription("commande du "+ dateDujour);
+         
+        
         itemList.setItems(items);
         transaction.setItemList(itemList);
      

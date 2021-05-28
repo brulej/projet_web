@@ -69,43 +69,35 @@
 							
 							
 							
-							<form>
+							<form  method="post" action= "login">
 								<div class="top-margin">
 									<label>Adresse mail <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<input id= "txtLogin" name = "txtLogin" type="text" value="${Login}" class="form-control">
 								</div>
 								<div class="top-margin">
 									<label>Mot de passe <span class="text-danger">*</span></label>
-									<input type="password" class="form-control" hidden >
+									<input id= "txtPassword" name = "txtPassword" type="text" value="${Password}" class="form-control" hidden >
 								</div>
 
 								<hr>
 
 								<div class="row">
+								
+								
+									<div class="col-sm-6 text-right">
+										<input style = "color:black" class="btn btn-action" type="submit" value="Se connecter"  name ='b EnConnect'  id= 'b EnConnect'>
+									</div>
+								
+								
+								
 									<div class="col-lg-4 text-right">
-										<a style = "color:black"class="btn btn-action" type="submit">Se connecter</a>
+										<a style = "color:black"class="btn btn-action" type="submit"  name ='b EnConnect'  id= 'b EnConnect' >Se connecter</a>
 									</div>
 								</div>
 							</form>
 							
 							
-														<form method="post" action= "login" >
-							
-								<div class="top-margin">
-									<label for="txtLogin"> login <span class="text-danger">*</span></label>
-									<input id= "txtLogin" name = "txtLogin" type="text" value="${Login}" autofocus />  
-								</div>
-								<div class="top-margin">
-									<label for="txtPassword"> password <span class="text-danger">*</span></label>
-									<input id= "txtPassword" name = "txtPassword" type="text" value="${Password}" autofocus />
-								</div>
-								<input name = 'b EnConnect' type = 'submit' >
-								<div class='errorMessage'> ${errorMessage}</div>
-
-								<hr>
-
-								
-							</form>
+														
 							
 							
 							
