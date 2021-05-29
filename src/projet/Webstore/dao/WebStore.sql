@@ -22,12 +22,13 @@ CREATE TABLE T_Articles (
    IdArticle    int(4)         PRIMARY KEY AUTO_INCREMENT,
    Description  varchar(20)         NOT NULL,
    Brand        varchar(20)         NOT NULL,
-   UnitaryPrice float(12)          NOT NULL
+   UnitaryPrice float(12)          NOT NULL,
+   Photo        VARCHAR(40)         NOT NULL
    
 ) ENGINE = InnoDB;
  
-INSERT INTO T_Articles (IdArticle, Description, Brand, UnitaryPrice) value (1,'Jean','styli','65');
-INSERT INTO T_Articles (IdArticle, Description, Brand,  UnitaryPrice) value (2,'t shirt','styli', '30');
+INSERT INTO T_Articles (IdArticle, Description, Brand, UnitaryPrice,Photo) value (1,'Jean','styli','65','assets/jean.jpg');
+INSERT INTO T_Articles (IdArticle, Description, Brand,  UnitaryPrice,Photo) value (2,'t shirt','styli', '30','assets/tee-shirt.jpg');
 
 SELECT * FROM T_Articles;
 
@@ -53,11 +54,4 @@ SELECT * FROM T_message;
 	
 	
 	
-
-
-
-
-
-
-
 

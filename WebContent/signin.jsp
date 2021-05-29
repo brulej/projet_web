@@ -87,12 +87,7 @@
 									<div class="col-sm-6 text-right">
 										<input style = "color:black" class="btn btn-action" type="submit" value="Se connecter"  name ='b EnConnect'  id= 'b EnConnect'>
 									</div>
-								
-								
-								
-									<div class="col-lg-4 text-right">
-										<a style = "color:black"class="btn btn-action" type="submit"  name ='b EnConnect'  id= 'b EnConnect' >Se connecter</a>
-									</div>
+
 								</div>
 							</form>
 							

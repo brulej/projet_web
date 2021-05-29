@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="utf-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +20,8 @@
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
+	
+	
 
 </head>
 
@@ -34,28 +37,52 @@
 <!-- CONTAINER-->
 <!----------------------------------------------------------------------------------------------------------->
 
+<main role="main">
 
-<!----------------------------------------------------------------------------------------------------------->
-<!-- SIDEBAR ( adresse )-->
-<!----------------------------------------------------------------------------------------------------------->
-			<aside class="col-sm-3 sidebar sidebar-right">
-				<div class="widget">
-					<h4>Adresse</h4>
-					<address>
-						Place du Maréchal de Lattre de Tassigny, 75016 Paris
-					</address>
-					<h4>Téléphone:</h4>
-					<address>
-						01 44 05 44 05
-					</address>
-				</div>
-			</aside>
-			<!-- /Sidebar -->
-		</div>
-	</div>	<!-- /container -->
-	<section class="container-full top-space">
-		<div id="map"></div>
-	</section>
+  <section class="jumbotron text-center">
+    <div class="container">
+     <br/> <br/> <br/> <br/>
+      <h1>Notre collection 2021</h1>
+      <p class="lead text-muted"> ${connectedUser.login} ,  Nous espérons que vous trouverez votre bonheur !!!</p>
+      <p>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+    <div class="row">
+    
+    <c:forEach items="${catalogBrowser.articles}" var="articlevar">
+      </p>
+      
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+            <div class="card-body">
+              <p class="card-text"> ${articlevar.brand} - ${articlevar.description} .</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <form action="viewArticle" method="post">
+                  <input name="btnAdd" type="submit" value="Acheter" />&nbsp; &nbsp;
+       			  </form>  <br/>
+                  
+                </div>
+                <small class="text-muted">${articlevar.unitaryPrice} euros  </small>
+              </div>
+            </div>
+          </div>
+          </div>
+
+        </c:forEach>
+	
+      </div>
+    </div>
+  </div>
+
+</main>
+
 <!----------------------------------------------------------------------------------------------------------->
 <!-- FOOTER -->
 <!----------------------------------------------------------------------------------------------------------->

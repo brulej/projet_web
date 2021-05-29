@@ -10,17 +10,25 @@ public class CatalogBrowser {
 
     private int currentPosition = 1;
     private Article currentArticle;
-    private int articleCount = ArticleDAO.getArticleCount();
-    
+    public int articleCount = ArticleDAO.getArticleCount();
+    public List<Article> articles;
     private List<ShoppingCartLine> shoppingCart = new ArrayList<>();
     
     
     public CatalogBrowser() {
         currentArticle = ArticleDAO.getArticleById( currentPosition );
+        articleCount = ArticleDAO.getArticleCount();
+        articles = ArticleDAO.getAll();
+        System.out.println(articles);
+        System.out.println("--------------------------------------------------------------");
     }
     
     public Article getCurrentArticle() {
         return currentArticle;
+    }
+    
+    public List<Article> getArticles() {
+        return articles;
     }
 
     public List<ShoppingCartLine> getShoppingCart() {

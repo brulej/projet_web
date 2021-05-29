@@ -14,6 +14,7 @@ import projet.Webstore.dao.User;
 import projet.Webstore.dao.DAOContext;
 import projet.Webstore.dao.UserDAO;
 import projet.Webstore.dao.ArticleDAO;
+import projet.Webstore.dao.CatalogBrowser;
 
 
 import javax.servlet.ServletContext;
@@ -61,12 +62,20 @@ public class Login extends HttpServlet {
         dao.setContext(getServletContext());
  
         User connectedUser  = dao.isValidLogin( login, password );
+        
+        CatalogBrowser cata =new CatalogBrowser();
+        double prix = cata.getArticles().get(0).getUnitaryPrice();
+        
+        //System.out.println("print"+cata.articleCount);
+        System.out.println("print"+ prix);
         if ( connectedUser != null ) {
             
             HttpSession session = request.getSession( true );
             session.setAttribute( "connectedUser", connectedUser );
             session.setAttribute( "catalogBrowser", new CatalogBrowser() );
-            request.getRequestDispatcher( "/viewArticle.jsp" ).forward( request, response );
+            session.setAttribute( "cataCount", cata.articleCount );
+            //request.getRequestDispatcher( "/viewArticle.jsp" ).forward( request, response );
+            request.getRequestDispatcher( "/articles.jsp" ).forward( request, response );
         
         } else {
         

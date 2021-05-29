@@ -48,7 +48,8 @@ public class ViewArticle extends HttpServlet {
             browser.addCurrentArticle();
         }
         
-        request.getRequestDispatcher( "/viewArticle.jsp" ).forward( request, response );
+        //request.getRequestDispatcher( "/viewArticle.jsp" ).forward( request, response );
+        request.getRequestDispatcher( "/articles.jsp" ).forward( request, response );
     }
     
 }

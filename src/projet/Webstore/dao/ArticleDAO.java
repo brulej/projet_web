@@ -14,9 +14,40 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArticleDAO extends DAOContext {
-
+	
+    public static List<Article> getAll( ) {
+    	Article article ;
+    	List<Article> articles= new ArrayList<>();
+        try ( Connection connection = DriverManager.getConnection( dbURL, dbLogin, dbPassword ) ){
+            String strSql = "SELECT * FROM T_Articles ";
+            try ( PreparedStatement statement  = connection.prepareStatement( strSql ) ) {
+                try ( ResultSet resultSet = statement.executeQuery() ) {
+                	while(resultSet.next()){ 
+                		article = new Article(
+                                resultSet.getInt( "idArticle" ),
+                                resultSet.getString( "description" ),
+                                resultSet.getString( "brand" ),
+                                resultSet.getDouble( "unitaryPrice" ),
+                				resultSet.getString( "photo" ));
+                		
+                		articles.add(article);
+                		
+                		} 
+                    return articles;
+                }
+            }
+            
+        } catch ( Exception exception ) {
+            
+            throw new RuntimeException( exception );
+            
+        }
+    }
+	
     public static int getArticleCount() {
         try ( Connection connection = DriverManager.getConnection( dbURL, dbLogin, dbPassword ) ){
 
@@ -24,6 +55,7 @@ public class ArticleDAO extends DAOContext {
             try ( Statement statement  = connection.createStatement() ) {
                 try ( ResultSet resultSet = statement.executeQuery( strSql ) ) {
                     resultSet.next();
+                    System.out.println(resultSet.getInt( 1 ));
                     return resultSet.getInt( 1 );
                 }
             }
@@ -47,7 +79,8 @@ public class ArticleDAO extends DAOContext {
                             resultSet.getInt( "idArticle" ),
                             resultSet.getString( "description" ),
                             resultSet.getString( "brand" ),
-                            resultSet.getDouble( "unitaryPrice" )
+                            resultSet.getDouble( "unitaryPrice" ),
+                            resultSet.getString( "photo" )
                     );
                 }
             }
