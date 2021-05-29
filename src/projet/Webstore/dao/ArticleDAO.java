@@ -55,7 +55,6 @@ public class ArticleDAO extends DAOContext {
             try ( Statement statement  = connection.createStatement() ) {
                 try ( ResultSet resultSet = statement.executeQuery( strSql ) ) {
                     resultSet.next();
-                    System.out.println(resultSet.getInt( 1 ));
                     return resultSet.getInt( 1 );
                 }
             }
@@ -69,7 +68,6 @@ public class ArticleDAO extends DAOContext {
     
     public static Article getArticleById( int idArticle ) {
         try ( Connection connection = DriverManager.getConnection( dbURL, dbLogin, dbPassword ) ){
-            System.out.println( "connection to the database" );
             String strSql = "SELECT * FROM T_Articles WHERE idArticle=?";
             try ( PreparedStatement statement  = connection.prepareStatement( strSql ) ) {
                 statement.setInt( 1, idArticle );

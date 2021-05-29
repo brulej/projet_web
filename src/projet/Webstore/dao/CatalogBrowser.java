@@ -19,8 +19,6 @@ public class CatalogBrowser {
         currentArticle = ArticleDAO.getArticleById( currentPosition );
         articleCount = ArticleDAO.getArticleCount();
         articles = ArticleDAO.getAll();
-        System.out.println(articles);
-        System.out.println("--------------------------------------------------------------");
     }
     
     public Article getCurrentArticle() {

@@ -27,8 +27,8 @@ CREATE TABLE T_Articles (
    
 ) ENGINE = InnoDB;
  
-INSERT INTO T_Articles (IdArticle, Description, Brand, UnitaryPrice,Photo) value (1,'Jean','styli','65','assets/jean.jpg');
-INSERT INTO T_Articles (IdArticle, Description, Brand,  UnitaryPrice,Photo) value (2,'t shirt','styli', '30','assets/tee-shirt.jpg');
+INSERT INTO T_Articles (IdArticle, Description, Brand, UnitaryPrice,Photo) value (1,'Jean','styli','65','assets/img/jean.jpg');
+INSERT INTO T_Articles (IdArticle, Description, Brand,  UnitaryPrice,Photo) value (2,'t shirt','styli', '30','assets/img/tee-shirt.jpg');
 
 SELECT * FROM T_Articles;
 
@@ -45,6 +45,7 @@ CREATE TABLE T_message (
 INSERT INTO T_message ( Nom, mail,tel,images,mess) value ('Jean','jean@hotmail.fr','jiih','ijoijoi','oijoijo');
 
 SELECT * FROM T_message;
+
 
 
 

@@ -64,10 +64,8 @@ public class Login extends HttpServlet {
         User connectedUser  = dao.isValidLogin( login, password );
         
         CatalogBrowser cata =new CatalogBrowser();
-        double prix = cata.getArticles().get(0).getUnitaryPrice();
+        String prix = cata.getArticles().get(0).getPhoto();
         
-        //System.out.println("print"+cata.articleCount);
-        System.out.println("print"+ prix);
         if ( connectedUser != null ) {
             
             HttpSession session = request.getSession( true );
