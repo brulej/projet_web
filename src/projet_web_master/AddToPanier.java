@@ -57,7 +57,7 @@ public class AddToPanier extends HttpServlet {
         Date date = new Date();
         String dateDujour =format.format(date);
         String nomCokie = "article-"+dateDujour;*/
-        String nomCokie = "article-"+article;
+        String nomCokie = "article--"+article;
         String valeurCookie = article+"-"+prix;
         
         Cookie cookie = new Cookie(URLEncoder.encode( nomCokie, "UTF-8" ), URLEncoder.encode( valeurCookie, "UTF-8" ));

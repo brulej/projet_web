@@ -34,18 +34,22 @@ public class AuthorizePaymentServlet extends HttpServlet {
     	String subtotal ;
     	String shipping ;
     	String tax ;
+    	double taxnum;
     	String Qte ;
     	List<OrderDetail> orderDetails = new ArrayList<>();
     	OrderDetail orderDetail;
     	
     	Qte = "1";
-    	int nbproduct = 1;
+    	int nbproduct = Integer.parseInt(request.getParameter("nbarticles"));
     	
-    	for ( int i = 0; i< nbproduct; i ++) {
-    		product= request.getParameter("product"+i);
-    		subtotal= request.getParameter("subtotal"+i);
-    		shipping=request.getParameter("shipping"+i);
-    		tax= request.getParameter("tax"+i);
+    	System.out.println(request.getParameter("products1"));
+    	for ( int i = 1; i<= nbproduct; i ++) {
+    		
+    		product= request.getParameter("products"+i);
+    		subtotal= request.getParameter("subtotals"+i);
+    		shipping=request.getParameter("shipping");
+    		taxnum =(Double.parseDouble(subtotal.trim()))*0.2;
+        	tax= Double.toString(taxnum).replace(',', '.');
         
         orderDetail = new OrderDetail(product, subtotal, shipping, tax,  Qte);
         orderDetails.add( orderDetail);

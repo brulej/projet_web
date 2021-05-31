@@ -29,13 +29,17 @@
 		<c:forEach items="${cookies}" var="article" varStatus ="i">
   
     		<p > ${article.description} : ${article.unitaryPrice} euros</p>
-            <input type="hidden" name="product${i}" value="${article.description}" />
-            <input type="hidden" name="subtotal${i}" value="${article.unitaryPrice}" />
+
+            <input type="hidden" name="products${i.count}" value="${article.description}" />
+            <input type="hidden" name="subtotals${i.count}" value="${article.unitaryPrice}" />
+            <input type="hidden" name="nbarticles" value=${i.count} />
 
     	</c:forEach>
     	
     	
-    	
+    	<input type="hidden" name="shipping" value="10" />
+         <input type="submit" value="Checkout" />
+   
     </form>
     
     
@@ -59,14 +63,6 @@
             <td>Shipping:</td>
             <td><input type="text" name="shipping0" value="10" /></td>
         </tr>    
-        <tr>
-            <td>Tax:</td>
-            <td><input type="text" name="tax0" value="10" /></td>
-        </tr>    
-        <tr>
-            <td>Total Amount:</td>
-            <td><input type="text" name="total0" value="120" /></td>
-        </tr>
         <tr>
             <td colspan="2" align="center">
                 <input type="submit" value="Checkout" />

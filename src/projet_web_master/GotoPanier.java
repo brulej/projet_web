@@ -47,7 +47,7 @@ public class GotoPanier extends HttpServlet {
         
         if (cookies != null) {
             for (Cookie cookie : cookies) {
-                if (cookie.getName().startsWith("article-") && cookie.getValue().contains("-") ) {
+                if (cookie.getName().startsWith("article--") && cookie.getValue().contains("-") ) {
                 	System.out.println("valeur deuxieme appel"+cookie.getValue());
                 	article = new Article();
                 	article.setDescription(cookie.getValue().split("-")[0]);
