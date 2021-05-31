@@ -10,6 +10,8 @@ import javax.servlet.http.*;
 
 import com.paypal.api.payments.Item;
 import com.paypal.base.rest.PayPalRESTException;
+
+import projet.Webstore.dao.Article;
  
 
 /**
@@ -25,7 +27,22 @@ public class AuthorizePaymentServlet extends HttpServlet {
  
     public AuthorizePaymentServlet() {
     }
- 
+    
+    public int getnbproduct(HttpServletRequest request) {
+    	
+        Cookie[] cookies = request.getCookies();
+        List<Article> cookiesSelec = new ArrayList();
+        Article article;
+        int i =0;
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().startsWith("article--") && cookie.getValue().contains("-") ) {
+                i++;
+                }
+            }
+        }
+    	return i;
+    }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -40,9 +57,10 @@ public class AuthorizePaymentServlet extends HttpServlet {
     	OrderDetail orderDetail;
     	
     	Qte = "1";
-    	int nbproduct = Integer.parseInt(request.getParameter("nbarticles"));
     	
-    	System.out.println(request.getParameter("products1"));
+    	int nbproduct = getnbproduct(request);
+    	
+    	System.out.println("nbproducts : "+nbproduct);
     	for ( int i = 1; i<= nbproduct; i ++) {
     		
     		product= request.getParameter("products"+i);
