@@ -36,16 +36,20 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.jsp">Home</a></li>
-					<li class="active" ><a href="about.jsp">Soldes</a></li>
+					<li class="active" ><a href="articles.jsp">Soldes</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="produithomme.jsp">Homme</a></li>
-							<li><a href="produitfemme.jsp">Femme</a></li>
+							<li><a href="articles.jsp">Homme</a></li>
+							<li><a href="articles.jsp">Femme</a></li>
 						</ul>
 					</li>
 					<li> <a href="contact.jsp">Contact</a></li>
 					<li><a class="btn" href="signin.jsp">SIGN IN / SIGN UP</a></li>
+					<li> 		</li>
+	            	<form action="GotoPanier" method="post" >
+	            		<button class="btnimage" type="submit" name="btnEnvoiForm" title="Panier"><img src="assets/img/panier.png" alt=" alternative" /></button>
+            		</form>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>

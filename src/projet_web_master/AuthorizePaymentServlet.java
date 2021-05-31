@@ -34,7 +34,6 @@ public class AuthorizePaymentServlet extends HttpServlet {
     	String subtotal ;
     	String shipping ;
     	String tax ;
-    	String total ;
     	String Qte ;
     	List<OrderDetail> orderDetails = new ArrayList<>();
     	OrderDetail orderDetail;
@@ -47,9 +46,8 @@ public class AuthorizePaymentServlet extends HttpServlet {
     		subtotal= request.getParameter("subtotal"+i);
     		shipping=request.getParameter("shipping"+i);
     		tax= request.getParameter("tax"+i);
-    		total=  request.getParameter("total"+i);
         
-        orderDetail = new OrderDetail(product, subtotal, shipping, tax, total, Qte);
+        orderDetail = new OrderDetail(product, subtotal, shipping, tax,  Qte);
         orderDetails.add( orderDetail);
     	}
          

@@ -54,7 +54,6 @@
     <div class="row">
     
     <c:forEach items="${catalogBrowser.articles}" var="articlevar">
-      </p>
       
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
@@ -63,7 +62,9 @@
               <p class="card-text"> ${articlevar.brand} - ${articlevar.description} .</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <form action="viewArticle" method="post">
+                  <form action="AddToPanier" method="post">
+                  <input id="article" name="article" type="hidden" value="${articlevar.description}">
+                  <input id="prix" name="prix" type="hidden" value="${articlevar.unitaryPrice}">
                   <input name="btnAdd" type="submit" value="Acheter" />&nbsp; &nbsp;
        			  </form>  <br/>
                   

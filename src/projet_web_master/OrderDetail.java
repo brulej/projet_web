@@ -18,12 +18,11 @@ public class OrderDetail {
     private int Qte;
  
     public OrderDetail(String productName, String subtotal,
-            String shipping, String tax, String total, String Qte) {
+            String shipping, String tax, String Qte) {
         this.productName = productName;
         this.subtotal = Double.parseDouble(subtotal);
         this.shipping = Double.parseDouble(shipping);
         this.tax = Double.parseDouble(tax);
-        this.total = Double.parseDouble(total);
         this.Qte = Integer.parseInt(Qte);
     }
  

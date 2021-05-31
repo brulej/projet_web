@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +23,28 @@
 <header id="head" class="secondary"></header>
 	<div class="container">
 <div align="center">
-    <h1>Check Out</h1>
+    <h1>Facture</h1>
     <br/>
+    <form action="authorize_payment" method="post">
+		<c:forEach items="${cookies}" var="article" varStatus ="i">
+  
+    		<p > ${article.description} : ${article.unitaryPrice} euros</p>
+            <input type="hidden" name="product${i}" value="${article.description}" />
+            <input type="hidden" name="subtotal${i}" value="${article.unitaryPrice}" />
+
+    	</c:forEach>
+    	
+    	
+    	
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    
     <form action="authorize_payment" method="post">
     <table>
         <tr>
