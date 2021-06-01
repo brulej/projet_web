@@ -7,15 +7,31 @@ CREATE TABLE T_Users (
 
 	IdUser      int(4)   PRIMARY KEY Auto_INCREMENT,
 	Login       varchar(20) NOT NULL, 
-	Password   varchar(20) NOT NULL, 
-	ConnectionNumber int(4) NOT NULL DEFAULT 0
+	Password   varchar(20) NOT NULL,
+	nom char(40) NOT NULL,
+    prenom char(40) NOT NULL,
+    Tel int(40) NOT NULL,
+    adresse char(40) NOT NULL,
+    numrue int(40) NOT NULL,
+    codePostale int(40) NOT NULL,
+    ville char(60) NOT NULL,
+    h char(40) ,
+    f char(40) ,
+    mlle char(40) ,
+    mme char(40) ,
+    mr char(40) ,
+    jour int(40) NOT NULL,
+    mois char(40) NOT NULL,
+    annee int(40) NOT NULL
+
 	
 ) ENGINE = InnoDB;
 
-INSERT INTO T_Users (IdUser, Login, Password) value (1, 'Anderson', 'Neo');
-INSERT INTO T_Users (IdUser, Login, Password) value (2, 'Bond', 'James');
+INSERT INTO T_Users (IdUser, Login, Password,h, jour, annee, mois,numrue, nom, prenom, Tel, adresse, codePostale, ville) value (1, 'Anderson', 'Neo','h','28','1999','mars','114','c','d','07','p','75','pa');
 
 SELECT * FROM T_Users;
+
+
 
 
 CREATE TABLE T_Articles (
