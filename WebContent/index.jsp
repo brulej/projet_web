@@ -54,7 +54,7 @@
 	<!-- Intro -->
 	<div class="container text-center">
 		<br> <br>
-		<p1 class="thin" style = "color:black">Notre aventure démarre en 2021, avec pour mission d'accompagner les femmes et les hommes dans tous leurs moments de vie en proposant une mode accessible, facile à porter, et déclinée dans un large colorama</p1>
+		<p1 class="thin" style = "color:black">Notre aventure démarre en 2021, avec pour mission d'accompagner les femmes et les hommes dans tous leurs moment de vie en proposant une mode accessible, facile à porter, et déclinée dans un large colorama</p1>
 		
 	</div>
 	<!-- /Intro-->
@@ -79,7 +79,7 @@ Il peut être plus long que prévu en raison d'une adresse invalide, des procéd
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Guide des tailles </h4></div>
 					<div class="h-body text-center">
-						<p>Cliquez juste sur le bouton "guide des tailles" sur chaque page produit pour voir les mesures en centimètres ou en pouces et pour être sûr qu'elles conviendront pour vous.</p>
+						<p>Cliquez juste sur le bouton <a href="C:\web\projet_web\WebContent\assets\img\guideDesTailles.jpg">guide des taille </a> pour voir les mesures en centimètres  pour être sûr qu'elles conviendront pour vous.</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">
