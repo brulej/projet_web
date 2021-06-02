@@ -65,7 +65,9 @@
                   <form action="AddToPanier" method="post">
                   <input id="article" name="article" type="hidden" value="${articlevar.description}">
                   <input id="prix" name="prix" type="hidden" value="${articlevar.unitaryPrice}">
-                  <input name="btnAdd" type="submit" value="Acheter" />&nbsp; &nbsp;
+                  <div class="col-sm-6 text-right">
+                  <input style = "color:black" name="btnAdd" type="submit" value="Acheter" />&nbsp; &nbsp;
+                  </div>
        			  </form>  <br/>
                   
                 </div>

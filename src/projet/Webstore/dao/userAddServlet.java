@@ -52,18 +52,20 @@ public class userAddServlet extends HttpServlet{
 		String jour= request.getParameter("jour"); 
 		String annee = request.getParameter("annee"); 
 		String mois = request.getParameter("mois"); 
+		String numrue = request.getParameter("numrue");
 		String adresse = request.getParameter("adresse"); 
 		String codePostale = request.getParameter("codePostale"); 
 		String ville = request.getParameter("ville");
 		String Tel = request.getParameter("Tel"); 
 		String login = request.getParameter("login");
+		
 		String password = request.getParameter("password");
 
 		System.out.println("in the doPost");
 
 		Properties props = new Properties();
 
-		try (FileInputStream fis = new FileInputStream("C:\\web\\projet_web\\src\\projet\\Webstore\\dao\\config.properties")){
+		try (FileInputStream fis = new FileInputStream("C:\\web\\projet_web\\WebContent\\WEB-INF\\config.properties")){
 			props.load(fis);
 		}
 
@@ -79,13 +81,13 @@ public class userAddServlet extends HttpServlet{
 
 		try(Connection connection = DriverManager.getConnection(url, login_jdbc, password_jdbc)){
 			System.out.println("Connection BDD réussi -  pour insertion");
-			String strSQLInsert = "insert into t_users (h, f, mr, mme, mlle, jour, annee, mois, login, password, nom, prenom, Tel, adresse, codePostale, ville) values ('" + h + " ','" + f + " ','" + mr + " ','" + mme + " ','" + mlle + " ','" + jour + " ','" + annee + " ','" + mois + " ','" + login + " ', '" + password +"', '" + nom +"', '" + prenom +"', '" +Tel  +"', '" + adresse +"', '" + codePostale +"', '" + ville +"')";
+			String strSQLInsert = "insert into t_users (h, f, mr, mme, mlle, jour, annee, mois,numrue, login, password, nom, prenom, Tel, adresse, codePostale, ville) values ('" + h + " ','" + f + " ','" + mr + " ','" + mme + " ','" + mlle + " ','" + jour + " ','" + annee + " ','" + mois  +" ','" + numrue + " ','"+ login + " ', '" + password +"', '" + nom +"', '" + prenom +"', '" +Tel  +"', '" + adresse +"', '" + codePostale +"', '" + ville +"')";
 			try(Statement state = connection.createStatement()){
 				state.executeUpdate(strSQLInsert);
 			}
 			
 			System.out.println("Succes insertion");
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.getRequestDispatcher("boitedialogue.jsp").forward(request, response);
 		} catch (SQLException e) {
 			throw new IllegalStateException(e);
 		}

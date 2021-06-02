@@ -72,11 +72,11 @@
 							<form  method="post" action= "login">
 								<div class="top-margin">
 									<label>Adresse mail <span class="text-danger">*</span></label>
-									<input id= "txtLogin" name = "txtLogin" type="text" value="${Login}" class="form-control">
+									<input id= "login" name = "login" type="text" value="${login}" class="form-control">
 								</div>
 								<div class="top-margin">
 									<label>Mot de passe <span class="text-danger">*</span></label>
-									<input id= "txtPassword" name = "txtPassword" type="text" value="${Password}" class="form-control" hidden >
+									<input id= "password" name = "password" type="text" value="${password}" class="form-control" hidden >
 								</div>
 
 								<hr>
