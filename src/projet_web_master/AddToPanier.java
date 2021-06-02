@@ -62,7 +62,7 @@ public class AddToPanier extends HttpServlet {
         
         Cookie cookie = new Cookie(URLEncoder.encode( nomCokie, "UTF-8" ), URLEncoder.encode( valeurCookie, "UTF-8" ));
         System.out.println("valeur du cookie : " +cookie.getValue());
-        cookie.setMaxAge(60 * 60 * 24 * 30);
+        cookie.setMaxAge(60 * 5);// 5minutes
         response.addCookie(cookie);
         
         this.getServletContext().getRequestDispatcher("/articles.jsp").forward(request, response);

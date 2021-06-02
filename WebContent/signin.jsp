@@ -61,7 +61,7 @@
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<h3 class="thin text-center">Connectez-vous</h3>
-							<p style = "color:black" class="text-center text-muted">Vous n'avez pas encore un compte,<a href="signup.jsp">Cliquez-ici </a> pour s'inscrire </p>
+							<p style = "color:black" class="text-center text-muted">Vous n'avez pas encore un compte,<a href="admin_user_insert.jsp">Cliquez-ici </a> pour s'inscrire </p>
 							<hr>
 							
 							

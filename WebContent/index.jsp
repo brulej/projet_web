@@ -79,7 +79,7 @@ Il peut être plus long que prévu en raison d'une adresse invalide, des procéd
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Guide des tailles </h4></div>
 					<div class="h-body text-center">
-						<p>Cliquez juste sur le bouton <a href="WebContent/assets/img/guideDesTailles.jpg">guide des taille </a> pour voir les mesures en centimètres  pour être sûr qu'elles conviendront pour vous.</p>
+						<p>Cliquez juste sur le bouton <a href="assets/img/guideDesTailles.jpg">guide des tailles </a> pour voir les mesures en centimètres  pour être sûr qu'elles conviendront pour vous.</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">

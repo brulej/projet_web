@@ -68,6 +68,7 @@ public class addmessage extends HttpServlet {
         MessageDAO dao = new MessageDAO();
         dao.setContext(getServletContext());
         dao.sendMessage( names,  mail ,  tel, cheminImages, message);
+        request.getRequestDispatcher("contact.jsp").forward(request, response);
 	}
 	
 	private String fileDirector (HttpServletRequest request)throws ServletException, IOException {
