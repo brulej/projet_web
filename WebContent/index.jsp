@@ -45,7 +45,7 @@
 				<h1 class="lead" style="color:black";>Bienvenue sur votre boutique en ligne </h1>
 				<br>
 				</br>
-				<p><a href = "signin.jsp" class="btn btn-default btn-lg" role="button">Se connecter</a> </p>
+				<p><a href = "admin_user_insert.jsp" class="btn btn-default btn-lg" role="button">Se connecter</a> </p>
 			</div>
 		</div>
 	</header>

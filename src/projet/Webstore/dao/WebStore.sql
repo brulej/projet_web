@@ -22,12 +22,13 @@ CREATE TABLE T_Users (
     mr char(40) ,
     jour int(40) NOT NULL,
     mois char(40) NOT NULL,
-    annee int(40) NOT NULL
+    annee int(40) NOT NULL,
+    ConnectionNumber int(4) NOT NULL DEFAULT 0
 
 	
 ) ENGINE = InnoDB;
 
-INSERT INTO T_Users (IdUser, Login, Password,h, jour, annee, mois,numrue, nom, prenom, Tel, adresse, codePostale, ville) value (1, 'Anderson', 'Neo','h','28','1999','mars','114','c','d','07','p','75','pa');
+INSERT INTO T_Users (IdUser, login, password,h, jour, annee, mois,numrue, nom, prenom, Tel, adresse, codePostale, ville) value (1, 'Anderson', 'Neo','h','28','1999','mars','114','c','d','07','p','75','pa');
 
 SELECT * FROM T_Users;
 

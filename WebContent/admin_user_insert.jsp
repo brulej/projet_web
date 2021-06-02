@@ -215,7 +215,7 @@
       <li class="form-line" data-type="control_email" id="id_3">
         <label class="form-label form-label-left form-label-auto" id="label_3" for="input_3"> Login </label>
         <div id="cid_3" class="form-input">
-          <input type="email" id="login"  size="30" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_3">
+          <input type="email" id="login" name="login"  size="30" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_3">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_24">
