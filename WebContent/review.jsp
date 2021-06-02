@@ -25,11 +25,11 @@
 	<!-- container -->
 	<div class="container">
 <div align="center">
-    <h1>Please Review Before Paying</h1>
+    <h1>Vérification des informations</h1>
     <form action="execute_payment" method="post">
     <table>
         <tr>
-            <td colspan="2"><b>Transaction Details:</b></td>
+            <td colspan="2"><b>Details de la transaction:</b></td>
             <td>
                 <input type="hidden" name="paymentId" value="${param.paymentId}" />
                 <input type="hidden" name="PayerID" value="${param.PayerID}" />
@@ -40,31 +40,31 @@
             <td>${transaction.description}</td>
         </tr>
         <tr>
-            <td>Subtotal:</td>
-            <td>${transaction.amount.details.subtotal} USD</td>
+            <td>Sus-total:</td>
+            <td>${transaction.amount.details.subtotal} euros</td>
         </tr>
         <tr>
-            <td>Shipping:</td>
-            <td>${transaction.amount.details.shipping} USD</td>
+            <td>Livraison:</td>
+            <td>${transaction.amount.details.shipping} euros</td>
         </tr>
         <tr>
             <td>Tax:</td>
-            <td>${transaction.amount.details.tax} USD</td>
+            <td>${transaction.amount.details.tax} euros</td>
         </tr>
         <tr>
             <td>Total:</td>
-            <td>${transaction.amount.total} USD</td>
+            <td>${transaction.amount.total} euros</td>
         </tr>
         <tr><td><br/></td></tr>
         <tr>
-            <td colspan="2"><b>Payer Information:</b></td>
+            <td colspan="2"><b>Informations sur l'acheteur:</b></td>
         </tr>
         <tr>
-            <td>First Name:</td>
+            <td>Prénom:</td>
             <td>${payer.firstName}</td>
         </tr>
         <tr>
-            <td>Last Name:</td>
+            <td>Nom:</td>
             <td>${payer.lastName}</td>
         </tr>
         <tr>
@@ -73,35 +73,35 @@
         </tr>
         <tr><td><br/></td></tr>
         <tr>
-            <td colspan="2"><b>Shipping Address:</b></td>
+            <td colspan="2"><b>Address de livraison:</b></td>
         </tr>
         <tr>
-            <td>Recipient Name:</td>
+            <td>Nom:</td>
             <td>${shippingAddress.recipientName}</td>
         </tr>
         <tr>
-            <td>Line 1:</td>
+            <td>Adresse:</td>
             <td>${shippingAddress.line1}</td>
         </tr>
         <tr>
-            <td>City:</td>
+            <td>Ville:</td>
             <td>${shippingAddress.city}</td>
         </tr>
         <tr>
-            <td>State:</td>
+            <td>Région:</td>
             <td>${shippingAddress.state}</td>
         </tr>
         <tr>
-            <td>Country Code:</td>
+            <td>Code Pays:</td>
             <td>${shippingAddress.countryCode}</td>
         </tr>
         <tr>
-            <td>Postal Code:</td>
+            <td>Code postal:</td>
             <td>${shippingAddress.postalCode}</td>
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <input type="submit" value="Pay Now" />
+                <input type="submit" value="Payer" />
             </td>
         </tr>    
     </table>
