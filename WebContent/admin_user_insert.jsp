@@ -42,27 +42,7 @@
 
 
 
-<script type="text/javascript">
-	JotForm.init(function(){
-if (window.JotForm && JotForm.accessible) $('input_19').setAttribute('tabindex',0);
-if (window.JotForm && JotForm.accessible) $('input_21').setAttribute('tabindex',0);
-if (window.JotForm && JotForm.accessible) $('input_22').setAttribute('tabindex',0);
-      setTimeout(function() {
-          $('input_3').hint('ex: myname@example.com');
-       }, 20);
-if (window.JotForm && JotForm.accessible) $('input_24').setAttribute('tabindex',0);
-if (window.JotForm && JotForm.accessible) $('input_25').setAttribute('tabindex',0);
-	JotForm.newDefaultTheme = false;
-	JotForm.extendsNewTheme = false;
-	JotForm.newPaymentUIForNewCreatedForms = false;
-      JotForm.alterTexts({"alphabetic":"Ce champ ne peut contenir que des lettres.","alphanumeric":"Ce champ ne peut contenir que des lettres et des chiffres.","confirmClearForm":"Êtes-vous certain d'effacer le formulaire?","confirmEmail":"Email ne correspond pas","email":"Saisir une adresse courriel valide","generalError":"Il y a des erreurs dans le formulaire. Merci de les corriger avant de continuer.","generalPageError":"Il ya des erreurs sur cette page. S'il vous plaît corriger avant de continuer.","gradingScoreError":"Le score total devrais être moins ou égal à","incompleteFields":"Des champs obligatoires ne sont pas complétés. Veuillez les compléter.","inputCarretErrorA":"L'entrée ne doit pas être inférieure à la valeur minimale:","inputCarretErrorB":"L'entré de devrais pas être plus grande que la valeur maximum:","lessThan":"Votre score devrait être inférieur ou égal à ","maxDigitsError":"Les chiffres maximum autorisé sont ","maxSelectionsError":"Vous avez sélectionné le maximum autorisé.","minSelectionsError":"Le nombre minimum requis de sélections est","multipleFileUploads_emptyError":"{file} est vide, veuillez sélectionner à nouveau les fichiers sans elle.","multipleFileUploads_minSizeError":"{file} est trop petite, la taille de fichier minimale est {minSizeLimit}.","multipleFileUploads_onLeave":"Les fichiers ont été envoyé, si vous quittez maintenant l'envoi sera annulé.","multipleFileUploads_sizeError":"{file} est trop grand, la taille maximale d'un fichier est {sizeLimit}.","multipleFileUploads_typeError":"{file} a invalide extension. Seulement {extensions} sont autorisées.","numeric":"Ce champ ne peut contenir que des valeurs numériques","pastDatesDisallowed":"La date doit pas être dans le passé","pleaseWait":"S'il vous plaît patienter...","required":"Ce champs est requis.","requireEveryRow":"Chaque ligne est nécessaire.","requireOne":"Au moins un champ est requis","submissionLimit":"Désolé ! Une seule inscription est permise. Les propositions multiples sont désactivés pour ce formulaire.","uploadExtensions":"Vous ne pouvez uploader que les fichiers suivants :","uploadFilesize":"La taille du fichier ne peut pas dépasser :"});
-    /*INIT-END*/
-	});
-
-   JotForm.prepareCalculationsOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et prenom","type":"control_fullname"},{"name":"soumettre","qid":"2","text":"Soumettre","type":"control_button"},{"name":"email3","qid":"3","text":"Email","type":"control_email"},{"name":"numeroDe4","qid":"4","text":"Numero de telephone","type":"control_phone"},null,{"name":"dateDe6","qid":"6","text":"Date de naissance","type":"control_birthdate"},null,{"name":"civilite","qid":"8","text":"Civilite","type":"control_radio"},null,{"name":"sexe","qid":"10","text":"Sexe","type":"control_radio"},null,null,null,null,{"name":"informationsPersonnelles","qid":"15","text":"Informations personnelles ","type":"control_head"},null,null,null,{"name":"adresse","qid":"19","text":"Adresse","type":"control_textbox"},null,{"name":"codePostale","qid":"21","text":"Code Postale","type":"control_textbox"},{"name":"ville","qid":"22","text":"Ville","type":"control_textbox"},{"name":"province","qid":"23","text":"Province","type":"control_dropdown"},{"description":"","name":"motDe","qid":"24","subLabel":"","text":"Mot de passe","type":"control_textbox"},{"description":"","name":"confirmezLe","qid":"25","subLabel":"","text":"Confirmez le mot de passe","type":"control_textbox"}]);
-   setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et prenom","type":"control_fullname"},{"name":"soumettre","qid":"2","text":"Soumettre","type":"control_button"},{"name":"email3","qid":"3","text":"Email","type":"control_email"},{"name":"numeroDe4","qid":"4","text":"Numero de telephone","type":"control_phone"},null,{"name":"dateDe6","qid":"6","text":"Date de naissance","type":"control_birthdate"},null,{"name":"civilite","qid":"8","text":"Civilite","type":"control_radio"},null,{"name":"sexe","qid":"10","text":"Sexe","type":"control_radio"},null,null,null,null,{"name":"informationsPersonnelles","qid":"15","text":"Informations personnelles ","type":"control_head"},null,null,null,{"name":"adresse","qid":"19","text":"Adresse","type":"control_textbox"},null,{"name":"codePostale","qid":"21","text":"Code Postale","type":"control_textbox"},{"name":"ville","qid":"22","text":"Ville","type":"control_textbox"},{"name":"province","qid":"23","text":"Province","type":"control_dropdown"},{"description":"","name":"motDe","qid":"24","subLabel":"","text":"Mot de passe","type":"control_textbox"},{"description":"","name":"confirmezLe","qid":"25","subLabel":"","text":"Confirmez le mot de passe","type":"control_textbox"}]);}, 20); 
-<!-- </script> -->
+<script src="assets/js/form.js"></script>
 <!-- </head> -->
 <fieldset>
 <body>
@@ -74,6 +54,8 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
           <div class="header-text httal htvam">
             <br> </br>
             <br> </br> 
+            <br> </br>
+            
             <h2 id="header_15" class="form-header" data-component="header">
            
               Informations personnelles
@@ -193,6 +175,12 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
           </div>
         </div>
       </li>
+      <li class="form-line" data-type="control_textbox" id="id_21">
+        <label class="form-label form-label-left form-label-auto" id="label_21" for="input_21"> Numéro de rue </label>
+        <div id="cid_21" class="form-input">
+          <input type="text" id="numrue" name="numrue" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_21">
+        </div>
+      </li> 
       <li class="form-line" data-type="control_textbox" id="id_19">
         <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19"> Adresse </label>
         <div id="cid_19" class="form-input">
@@ -227,7 +215,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
       <li class="form-line" data-type="control_email" id="id_3">
         <label class="form-label form-label-left form-label-auto" id="label_3" for="input_3"> Login </label>
         <div id="cid_3" class="form-input">
-          <input type="email" id="login" name="login" class="form-textbox validate[Email]" size="30" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_3">
+          <input type="email" id="login" name="login"  size="30" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_3">
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_24">
@@ -236,18 +224,13 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
           <input type="text" id="password" name="password" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_24">
         </div>
       </li>
-      <li class="form-line" data-type="control_textbox" id="id_25">
-        <label class="form-label form-label-left form-label-auto" id="label_25" for="input_25"> Confirmez le mot de passe </label>
-        <div id="cid_25" class="form-input">
-          <input type="text" id="input_25" name="q25_confirmezLe" data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_25">
-        </div>
-      </li>
+      
       <li class="form-line" data-type="control_button" id="id_2">
         <div class="center">
-				<button style = "color:black"class="btn btn-action" type="submit">Ajouter un utilisateur</button>
+				<button href="boitedialogue.jsp" style = "color:black"class="btn btn-action" type="submit">Ajouter un utilisateur</button>
 			</div>
         </div>
-      </li>
+     
       </form>
       </body>
       </fieldset>
@@ -256,21 +239,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"nomEt1","qid":"1","text":"Nom et pr
         <input type="text" name="website" value="">
       </li>
     </ul>
-  </div>
-  <script>
-  JotForm.showJotFormPowered = "new_footer";
-  </script>
-  <script>
-  JotForm.poweredByText = "Powered by JotForm";
-  </script>
+
+  
+ 
   <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="211102783506346-211102783506346">
-  <script type="text/javascript">
-  var all_spc = document.querySelectorAll("form[id='211102783506346'] .si" + "mple" + "_spc");
-for (var i = 0; i < all_spc.length; i++)
-{
-  all_spc[i].value = "211102783506346-211102783506346";
-}
-  </script>
+  
   <div class="formFooter-heightMask">
   </div>
  
@@ -281,4 +254,3 @@ for (var i = 0; i < all_spc.length; i++)
 	<jsp:include page="footer.jsp">
             <jsp:param name="year" value="2010"/>
     </jsp:include>
-<script type="text/javascript">JotForm.forwardToEu=true;</script></body></html>
